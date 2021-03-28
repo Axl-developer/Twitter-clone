@@ -14,7 +14,7 @@ export const Tweet = () => {
 
             <div className="left">
                 <div>
-                    <span className="bold">Nombre</span> <span className="lighter">@nombre</span> . <span className="lighter">1h</span>
+                    <span className="bold">Nombre</span> <span className="lighter">@nombre . 1h</span>
                 </div>
 
                 <div className="content_Tweet">

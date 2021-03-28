@@ -11,7 +11,7 @@
 }
 
 .UI__fixed_btn{
-    background-color: $primary;
+    background-color: getColor(primary);
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -22,14 +22,14 @@
     svg{
         width: 22px;
         height: 20px;
-        fill: rgb(255, 255, 255);
+        fill: #fff;
     }
 }
 .UI__nav{
     width: auto;
     height: 52px;
-    border-top:1px solid #EBEEF0;
-    background: $theme;
+    border-top:1px solid getColor(border);
+    background: getColor(theme);
 
     ul{
         height: 100%;
@@ -44,7 +44,7 @@
             .active{
                 div{
                     svg{
-                        fill:$primary
+                        fill:getColor(primary)
                     }
                 }
                 

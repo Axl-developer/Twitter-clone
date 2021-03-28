@@ -6,6 +6,9 @@
     margin: 0;
     font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
+body{
+    background-color: getColor(theme);
+}
 
 li{
     list-style: none;
@@ -13,10 +16,10 @@ li{
 
 .bold{
     font-weight: bold;
-    color: $textPrimary;
+    color: getColor(textPrimary);
 }
 
 .lighter{
     font-weight: 400;
-    color: $textSecondary;
+    color: getColor(textSecondary);
 }

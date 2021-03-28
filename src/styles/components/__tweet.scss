@@ -1,5 +1,5 @@
 .tweet__card{
-    border-bottom:1px solid rgb(235, 238, 240);
+    border-bottom:1px solid getColor(border);
     padding: 12px 16px;
     display: flex;
     .right{
@@ -40,10 +40,10 @@
 
             .like{
                 svg{
-                    fill:red;
+                    fill:#E0245E;
                 }
                 span{
-                    color: red;
+                    color: #E0245E;
                 }
             }
             div{
@@ -65,7 +65,7 @@
 
     }
     .content_Tweet{
-        color: $textTweet;
+        color: getColor(textTweet);
         font-size: 15px;
         overflow-wrap: break-word;
     }
