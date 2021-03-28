@@ -1,0 +1,74 @@
+.UI__MenuMobile{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.UI__aside{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 15px;
+}
+
+.UI__fixed_btn{
+    background-color: $primary;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+        width: 22px;
+        height: 20px;
+        fill: rgb(255, 255, 255);
+    }
+}
+.UI__nav{
+    width: auto;
+    height: 52px;
+    border-top:1px solid #EBEEF0;
+    background: $theme;
+
+    ul{
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        li{
+           width: auto;
+            display: flex;
+            align-items: center;
+
+            .active{
+                div{
+                    svg{
+                        fill:$primary
+                    }
+                }
+                
+            }
+
+            div{
+                border-radius: 35px;
+                overflow: hidden;
+            }
+           .UI__iconContainer{
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            overflow: hidden;
+
+            svg{
+                height: 26px;
+                width: 26px;
+                fill:#5B7083
+            }
+           }
+        }
+    }
+}
