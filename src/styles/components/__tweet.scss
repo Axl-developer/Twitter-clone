@@ -38,6 +38,14 @@
             display: flex;
             justify-content: space-between;
 
+            .like{
+                svg{
+                    fill:red;
+                }
+                span{
+                    color: red;
+                }
+            }
             div{
                 min-height: 33px;
                 min-width: 33px;
@@ -47,11 +55,6 @@
                 svg{
                     width: 1.25em;
                     fill:#5B7083;
-                    
-                    path{
-                        fill: red;
-                        background: red;
-                    }
                 }
 
                 span{
