@@ -4,16 +4,10 @@ import { MenuSelector } from '../UI/MenuSelector';
 import { DashboardRouter } from './DashboardRouter';
 
 export const AppRouter = () => {
-    window.addEventListener("resize", function(){
-        
-        console.log(window.screen.width)
-    });
-
-    
 
     return (
         <Router>
-            <div>
+            <div style={{display:'flex'}}>
                 
                 <MenuSelector />
 

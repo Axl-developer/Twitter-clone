@@ -4,16 +4,14 @@
     bottom: 0;
 }
 
-.UI__aside{
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 15px;
-}
 
 .UI__fixed_btn{
+    position: absolute;
+    top: -77px;
+    right: 19px;
     background-color: getColor(primary);
-    width: 64px;
-    height: 64px;
+    width: 61px;
+    height: 61px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -71,4 +69,67 @@
            }
         }
     }
+}
+
+
+//----------------------Menu Desktop
+
+.UI_MenuDesktop{
+    height: 100vh;
+    .UI__nav{
+        height: 100%;
+        width: 68px;
+        border: none;
+        border-right: 1px solid getColor(border);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-width: 46px;
+            min-height: 46px;
+            svg{
+                width: 44px;
+                height: 28px;
+                fill:#fff;
+            }
+
+            .content-img{
+                border-radius: 50%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                min-height: 38px;
+                min-width: 38px;
+                height: 38px;
+                width: 38px;
+                margin: 22px 0;
+                
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+            li{
+                padding: 15px 11px;
+
+                svg{
+                    fill: getColor(textTweet)
+                }
+            }
+        }
+    }
+
 }
