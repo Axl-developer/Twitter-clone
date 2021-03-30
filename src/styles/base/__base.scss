@@ -9,7 +9,9 @@
 body{
     background-color: getColor(theme);
 }
-
+.body{
+    margin-bottom: 52px;
+}
 li{
     list-style: none;
 }
@@ -22,4 +24,8 @@ li{
 .lighter{
     font-weight: 400;
     color: getColor(textSecondary);
+}
+
+.min-size{
+    font-size:12px;
 }

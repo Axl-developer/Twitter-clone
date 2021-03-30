@@ -9,8 +9,14 @@ $colors:(
     theme:#FFF,
     theme-black:#000,
 
+    themeInvert:#fff,
+    themeInvert-drak:#000,
+
     border:#EBEEF0,
     border-dark:#2F3336,
+
+    border2:#F9F7FA,
+    border-dark2:#15181C,
 
     textTweet:#000,
     textTweet-dark:#D9D9D9,
@@ -28,9 +34,11 @@ $colors-dark:(
     primary:map-get($colors, #1DA1F2),
     theme:map-get($colors, theme-black),
     border:map-get($colors, border-dark),
+    border2:map-get($colors, border-dark2),
     textTweet:map-get($colors, textTweet-dark),
     textPrimary:map-get($colors, textPrimary-dark),
     textSecondary:map-get($colors, textSecondary-dark),
+    themeInvert:map-get($colors, themeInvert-dark),
 );
 
 :root{

@@ -7,7 +7,7 @@ import { Notifications } from '../components/Notifications/Notifications';
 
 export const DashboardRouter = () => {
     return (
-        <div>
+        <div className="body">
             <Switch>
                 <Route exact path="/home" component={Home}/>
 

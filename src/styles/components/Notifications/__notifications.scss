@@ -1,0 +1,54 @@
+
+.Notifications__contentTab{
+    display: flex;
+
+    div{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        color:getColor(primary);
+        font-weight: bold;
+        font-size: 14px;
+        border-bottom: 2px solid getColor(border);
+        padding: 11px;
+    }
+
+    .active{
+        border-bottom: 2px solid getColor(primary);
+    }
+}
+
+
+
+.Notifications__contentMentions{
+    text-align: center;
+    padding: 20px;
+    h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.Notifications__IemNotification{
+    display: flex;
+    border-bottom: 1px solid getColor(border);
+    padding: 10px 15px;
+    svg{
+        width: 28px;
+        height: 28px;
+        fill:getColor(textTweet);
+    }
+
+    .Notifications__content_svg{
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
+    div{
+        color:getColor(textTweet)
+    }
+
+}
