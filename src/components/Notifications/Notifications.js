@@ -14,15 +14,15 @@ export const Notifications = () => {
             <div className="Notifications__contentTab">
 
                 <div 
-                    className={(Todo)&&'active'}
+                    className={(Todo) ?'active' : ''}
                     onClick={() => setTodo(!Todo)}
                 >
                     Todo
                 </div>
 
                 <div
-                className={(!Todo)&&'active'}
-                onClick={() => setTodo(!Todo)}
+                    className={(!Todo)?'active' : ''}
+                    onClick={() => setTodo(!Todo)}
                 >
                     Menciones
                 </div>

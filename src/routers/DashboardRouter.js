@@ -1,7 +1,9 @@
 import React from 'react'
 import {Switch,Route, Redirect} from "react-router-dom";
+import { Bookmarks } from '../components/Bookmarks/Bookmarks';
 import { Explore } from '../components/Explore/Explore';
 import { Home } from '../components/Home/Home';
+import { Lists } from '../components/Lists/Lists';
 import { Messages } from '../components/Messages/Messages';
 import { Notifications } from '../components/Notifications/Notifications';
 
@@ -16,6 +18,11 @@ export const DashboardRouter = () => {
                 <Route exact path="/notifications" component={Notifications}/>
 
                 <Route exact path="/messages" component={Messages}/>
+
+                <Route exact path="/bookmarks" component={Bookmarks}/>
+
+                <Route exact path="/lists" component={Lists}/>
+
 
                 <Redirect to="/home" />
             </Switch>
