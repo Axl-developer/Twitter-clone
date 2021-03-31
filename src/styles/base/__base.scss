@@ -12,6 +12,8 @@ body{
 .body{
     margin-bottom: 52px;
     width: 100%;
+    overflow: scroll;
+    max-height: 100vh;
 }
 li{
     list-style: none;
@@ -27,6 +29,27 @@ li{
     color: getColor(textSecondary);
 }
 
+.content-img{
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .min-size{
     font-size:12px;
+}
+
+.btn_primary{
+    background: none;
+    border: 1px solid getColor(primary);
+    color:getColor(primary);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: 800;
+    font-size: 15px;
+    height: min-content;
 }
