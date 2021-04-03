@@ -9,23 +9,25 @@ import { Notifications } from '../components/Notifications/Notifications';
 
 export const DashboardRouter = () => {
     return (
-        <div className="body">
-            <Switch>
-                <Route exact path="/home" component={Home}/>
+        <main className="body">
+            <div className="sub_body">
+                <Switch>
+                    <Route exact path="/home" component={Home}/>
 
-                <Route exact path="/explore" component={Explore}/>
+                    <Route exact path="/explore" component={Explore}/>
 
-                <Route exact path="/notifications" component={Notifications}/>
+                    <Route exact path="/notifications" component={Notifications}/>
 
-                <Route exact path="/messages" component={Messages}/>
+                    <Route exact path="/messages" component={Messages}/>
 
-                <Route exact path="/bookmarks" component={Bookmarks}/>
+                    <Route exact path="/bookmarks" component={Bookmarks}/>
 
-                <Route exact path="/lists" component={ListsScreen}/>
+                    <Route exact path="/lists" component={ListsScreen}/>
 
 
-                <Redirect to="/home" />
-            </Switch>
-        </div>
+                    <Redirect to="/home" />
+                </Switch>
+            </div>
+        </main>
     )
 }

@@ -25,7 +25,10 @@ $colors:(
     textPrimary-dark:#D9D9D9,
 
     textSecondary:#5B7083,
-    textSecondary-dark:#6E767D
+    textSecondary-dark:#6E767D,
+
+    widgetBackground:#15181C,
+    widgetBackground-dark:#15181C
     
 );
 
@@ -39,6 +42,7 @@ $colors-dark:(
     textPrimary:map-get($colors, textPrimary-dark),
     textSecondary:map-get($colors, textSecondary-dark),
     themeInvert:map-get($colors, themeInvert-dark),
+    widgetBackground:map-get($colors, widgetBackground-dark),
 );
 
 :root{

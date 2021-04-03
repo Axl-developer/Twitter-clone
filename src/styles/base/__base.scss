@@ -11,9 +11,7 @@ body{
 }
 .body{
     margin-bottom: 52px;
-    width: 100%;
-    overflow: scroll;
-    max-height: 100vh;
+    width: 100%;    
 }
 li{
     list-style: none;
@@ -52,4 +50,56 @@ li{
     font-weight: 800;
     font-size: 15px;
     height: min-content;
+}
+
+@media(min-width:600px){
+    header{
+        flex: 1;
+        display: flex;
+        position: relative;
+        
+        .UI_subHeader{
+            width: 100%;
+            position: absolute;
+            right: 0;
+            display: flex;
+            justify-content: flex-end;
+
+            .UI_MenuDesktop{
+                position: fixed;
+                
+                .UI__nav{
+                    border: none;
+                }
+            }
+        }
+        
+    }
+    body{
+        
+        margin: auto;
+
+        .body{
+            
+            flex: 4;
+            .sub_body{
+                max-width: 600px;
+                border: 1px solid getColor(border2);
+            }
+        }
+    }
+}
+
+@media(min-width:1000px){
+    .UI__header{
+        max-width: 88px;
+    }
+    .body{
+        flex: 3 !important;
+    }
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
 }
