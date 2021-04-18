@@ -5,12 +5,15 @@
 //Components
 @import './UI/_menu';
 @import './components/Home/_tweet';
+@import './components/Home/_screentweet';
 @import './components/Headers/_header';
 @import './components/Explore/_explore';
 @import './components/Notifications/_notifications';
 @import './components/NothingInfo/_nothingInfo';
 @import './components/Lists/_lists';
 @import './components/Widgets/_widgets';
+@import './components/User/_user';
+@import './components/Newtweet/__newTweet';
 
 //loader
 @import './Loading/_loading';

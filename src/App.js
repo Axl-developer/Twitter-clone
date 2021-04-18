@@ -8,7 +8,7 @@ export const App = () => {
 
     setTimeout(() => {
         setLoagind(false)
-    }, 1500);
+    }, 2000);
     
     return (
         (Loagind)

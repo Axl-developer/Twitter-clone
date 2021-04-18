@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
-export const Tweet = () => {
+export const Tweet = ({id}) => {
     const [Like, setLike] = useState(false)
     const imgs = [1,2]
+
+   
     return (
         <div className="tweet__card">
 
@@ -22,7 +25,9 @@ export const Tweet = () => {
                 </div>
                 {
                     (imgs)
-                    ? <div className="imgs-content">
+                    ? 
+                   <NavLink to={`./home/${id}`}>
+                        <div className="imgs-content">
                         {
                             imgs.map(img =>
                                     <img key={img} src="https://pbs.twimg.com/profile_images/1278376724900786182/zXbHm9d-_x96.jpg" atl="img"/>
@@ -30,6 +35,7 @@ export const Tweet = () => {
                         }
                         
                       </div>
+                   </NavLink>
                     : null
                 }
 

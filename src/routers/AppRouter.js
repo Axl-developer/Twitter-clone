@@ -12,7 +12,6 @@ export const AppRouter = () => {
             setIsMobile(false)
         }else{
             setIsMobile(true)
-            console.log('mobile')
         }
     }, [])
 
@@ -23,7 +22,6 @@ export const AppRouter = () => {
             setIsMobile(false)
         }else{
             setIsMobile(true)
-            console.log('mobile')
         }
     });
 

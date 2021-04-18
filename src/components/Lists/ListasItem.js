@@ -15,7 +15,7 @@ export const ListasItem = () => {
                 </div>
             </div>
 
-            <button className="btn_primary">
+            <button className="btn btn_primary">
                 Seguir
             </button>
         </div>

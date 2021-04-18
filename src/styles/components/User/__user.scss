@@ -1,0 +1,48 @@
+
+.User__content_perfil{
+    position: relative;
+    
+
+    .User__data{
+        padding: 20px;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.User__Perfil{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding: 20px 10px;
+    .content-img{
+        width: 25%;
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #000;
+    
+        position: absolute;
+        margin-top: -18%;
+        left: 20px;
+    }
+    
+}
+
+
+.User__data{
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-size: 20px;
+        font-weight: 800;
+        color: getColor(textPrimary);
+    }
+    span{
+        margin: 2px 0;
+    }
+}

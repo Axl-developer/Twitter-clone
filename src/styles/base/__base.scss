@@ -41,15 +41,23 @@ li{
     font-size:12px;
 }
 
-.btn_primary{
+.btn{
     background: none;
-    border: 1px solid getColor(primary);
-    color:getColor(primary);
     border-radius: 20px;
     padding: 5px 15px;
     font-weight: 800;
     font-size: 15px;
     height: min-content;
+}
+
+.btn_primary{
+    border: 1px solid getColor(primary);
+    color:getColor(primary);
+}
+.btn_secondary{
+    background-color: getColor(primary);
+    border: 1px solid getColor(primary);
+    color:getColor(themeInvert);
 }
 
 @media(min-width:600px){
@@ -78,13 +86,15 @@ li{
     body{
         
         margin: auto;
+    
 
         .body{
-            
+            margin-bottom: 0;
             flex: 4;
             .sub_body{
                 max-width: 600px;
                 border: 1px solid getColor(border2);
+                height: 100%;
             }
         }
     }

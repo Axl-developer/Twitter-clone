@@ -1,0 +1,91 @@
+.screenTweet__containerTweet{
+    margin: 12px 16px 0;
+}
+
+.screenTweet__HeadTweet{
+    display: flex;
+    .content-img{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .screenTweet__names{
+        margin-left: 10px;
+    }
+}
+
+.screenTweet__tweet{
+    margin-top: 12px;
+
+    .screenTweet__content{
+        color:getColor(textPrimary);
+        font-size: 23px;
+    }
+
+    .imgs-content{
+        margin-top: 12px;
+        width: auto;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        border:1px solid rgb(47, 51, 54);
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .screenTweet__times{
+        padding: 16px 0;
+        border-bottom:1px solid getColor(border) ;
+    }
+}
+
+.screenTweet__datas{
+    
+    .screenTweet__data{
+        display: flex;
+        padding: 16px 0;
+        border-bottom:1px solid getColor(border) ;
+
+        span{
+            margin-right: 10px;
+            margin-left: 4px;
+        }
+    }
+    
+}
+
+.screenTweet__icons{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    div{
+        min-height: 33px;
+        min-width: 33px;
+        display: flex;
+        align-items: center;
+
+        svg{
+            width: 1.25em;
+            fill:#5B7083;
+        }
+
+        span{
+            margin-left: 10px;
+        }
+    }
+}
+
+
+.screenTweet__comments{
+    border-top:1px solid getColor(border) ;
+}
