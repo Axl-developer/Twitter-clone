@@ -29,17 +29,32 @@
         font-size: 23px;
     }
 
-    .imgs-content{
+    .img-content{
         margin-top: 12px;
         width: auto;
+        height: 182px;
         border-radius: 16px;
         overflow: hidden;
         display: flex;
         align-items: center;
-        border:1px solid rgb(47, 51, 54);
-
         img{
-            width: 100%;
+            width: auto;
+            height: 100%;
+        }
+    }
+    .imgs-content{
+        @extend .img-content;
+
+        .TwoImgs{
+            width: 50%;
+            height: 100% !important;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            &:first-child{
+                margin-right: 2px;
+            }
+            
         }
     }
 

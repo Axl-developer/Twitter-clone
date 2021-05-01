@@ -3,6 +3,7 @@ import { IsMobile } from '../../helpers/IsMobile'
 import { Header } from '../Headers/Header'
 import { NewTweet } from '../New_Tweet/NewTweet'
 import { Tweet } from './Tweet'
+import { Tweets } from './Tweets'
 
 
 export const Home = () => {
@@ -26,6 +27,14 @@ export const Home = () => {
     });
 
 
+    //----------------------------------------------------
+
+    
+    
+    
+    console.log('render')
+    
+
     return (
         <div>
             <Header title={'Inicio'} destacados={true}/>
@@ -34,12 +43,12 @@ export const Home = () => {
                 (!Mobile) && <NewTweet />
             }
 
-            <Tweet id={1}/>
-            <Tweet id={2}/>
-            <Tweet id={3}/>
-            <Tweet id={4}/>
-            <Tweet id={5}/>
-            <Tweet id={6}/>
+            
+            {
+                Tweets.map( T=> <Tweet key={T.id} info={T}/>)
+            }
+
+
         </div>
     )
 }

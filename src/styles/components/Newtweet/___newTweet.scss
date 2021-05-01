@@ -68,6 +68,12 @@
                 svg{
                     fill:getColor(primary)
                 }
+
+                #circle circle{
+                    fill: none;
+                    stroke-width: red;
+                    stroke-width: 3px;
+                }
             }
         }
 

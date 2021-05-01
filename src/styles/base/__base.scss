@@ -57,7 +57,7 @@ li{
 .btn_secondary{
     background-color: getColor(primary);
     border: 1px solid getColor(primary);
-    color:getColor(themeInvert);
+    color:#fff;
 }
 
 @media(min-width:600px){

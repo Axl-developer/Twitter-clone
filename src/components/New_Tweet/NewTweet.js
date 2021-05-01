@@ -77,26 +77,14 @@ export const NewTweet = () => {
                             <div className="newTweet__icon_content">
                                 <div className="loadLength">
 
-                                    <motion.svg height="100%" viewBox="0 0 20 20" width="100%" >
-                                        <motion.circle 
-                                            cx="50%"
-                                            cy="50%"
-                                            fill="none"
-                                            stroke-width="2"
-                                            r="9"
-                                            stroke="#2F3336"></motion.circle>
-                                            
-                                        <motion.circle
-                                            cx="50%"
-                                            cy="50%"
-                                            fill="none"
-                                            stroke-width="2"
-                                            r="9"
-                                            stroke="#1DA1F2"
-                                            variants={icon}
-                                            >
-                                        </motion.circle>
-                                    </motion.svg>
+                                <motion.svg
+                                    viewBox="0 0 120 120"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    id="circle"
+                                    >
+                                    <motion.circle cx="60" cy="60" r="50"/>
+                                </motion.svg>
 
                                 </div>
                             </div>

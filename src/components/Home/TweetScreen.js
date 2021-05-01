@@ -1,33 +1,57 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router'
+import { GetTweetById } from '../../helpers/getTweetByid'
 import { Header } from '../Headers/Header'
+import { ImgsContents } from './ImgsContents'
 import { Tweet } from './Tweet'
+import { Tweets } from './Tweets'
 
 export const TweetScreen = () => {
 
+    const {tweetid} = useParams()
+
+    const info = GetTweetById(Tweets,Number(tweetid))
+    const {id,answers,body,likes,time,nombre,retweets,tweet_nom,url,imgs} = info
+
     const [Like, setLike] = useState(false)
 
-    const imgs = [1,2]
+    
 
     const comments = [
         {id:1,
-        name:'name',
-        sub_name:'@name',
+        nombre:'name',
+        answers:10,
+        likes:478,
+        retweets:66,
+        tweet_nom:'@name',
         time:'5h',
-        body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.'},
+        body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
+        url:"https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg",
+        imgs:[]},
 
         {id:2,
-        name:'name',
-        sub_name:'@name',
+        nombre:'name',
+        answers:10,
+        likes:478,
+        retweets:66,
+        tweet_nom:'@name',
         time:'5h',
-        body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.'},
+        body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
+        url:"https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg",
+        imgs:[]},
 
         {id:3,
-        name:'name',
-        sub_name:'@name',
+        nombre:'name',
+        answers:10,
+        likes:478,
+        retweets:66,
+        tweet_nom:'@name',
         time:'5h',
-        body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.'},
+        body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
+        url:"https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg",
+        imgs:[]},
     ]
-
+    
     return (
         <div>
             <Header title={'Inicio'}/>
@@ -39,31 +63,29 @@ export const TweetScreen = () => {
                         <img src="https://pbs.twimg.com/profile_images/1278376724900786182/zXbHm9d-_x96.jpg" atl="img"/>
                     </div>
                     <div className="screenTweet__names">
-                        <h1 className="bold">Elon Musk</h1>
-                        <span className="lighter">@elonmusk</span>
+                        <h1 className="bold">{nombre}</h1>
+                        <span className="lighter">{tweet_nom}</span>
                     </div>
                 </div>
 
                 <div className="screenTweet__tweet">
                     <div className="screenTweet__content">
-                    Consequat qui proident esse et voluptate eu elit voluptate nisi voluptate. Id elit elit ea ipsum in. Duis ut incididunt qui consectetur officia laboris elit ipsum adipisicing esse occaecat est ipsum consectetur. Adipisicing commodo aute et ipsum aliqua sint non Lorem aute sit.
+                    {body}
                     </div>
                     
-                    {
-                        (imgs)
-                        ? 
-                    <div>
-                        <div className="imgs-content">
+                    {(imgs.length >= 1)
+                    ?
+                        <div className={(imgs.length === 1)?"img-content":"imgs-content"}>
+                            
                             {
-                                imgs.map(img =>
-                                        <img key={img} src="https://pbs.twimg.com/profile_images/1278376724900786182/zXbHm9d-_x96.jpg" atl="img"/>
-                                    )
+                                (imgs.length >= 1)
+                                ?<ImgsContents idtweet={id} imgs={imgs} />
+                                : null
                             }
                             
                         </div>
-                    </div>
-                        : null
-                    }
+                    :''
+                }
 
                     <div className="screenTweet__times">
                         <span className="lighter">9:14 p.m - 15 abr 2021 Twitter for iPhone</span>
@@ -73,11 +95,11 @@ export const TweetScreen = () => {
 
                 <div className="screenTweet__datas">
                         <div className="screenTweet__data">
-                            <h1 className="bold">4 mil</h1>
+                            <h1 className="bold">{retweets}</h1>
                             <span className="lighter">Retweets</span>
-                            <h1 className="bold">4 mil</h1>
+                            <h1 className="bold">{answers}</h1>
                             <span className="lighter">Citar Tweet</span>
-                            <h1 className="bold">4 mil</h1>
+                            <h1 className="bold">{likes}</h1>
                             <span className="lighter">Me gusta</span>   
                         </div>
                     </div>
@@ -112,7 +134,7 @@ export const TweetScreen = () => {
                     comments.map( comment => 
                         <div className="screenTweet__comment" key={comment.id}>
 
-                           <Tweet />
+                           <Tweet info={comment}/>
 
                         </div>
                     )
