@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { ImgsContents } from './ImgsContents'
-import { Tweets } from './Tweets'
 
 export const Tweet = ({info}) => {
     
     const [Like, setLike] = useState(false)
     const {id,answers,body,likes,time,nombre,retweets,tweet_nom,url,imgs} = info
-    console.log('Navlink por si acaso en esta pantalla')
 
     const [ContLike, setContLike] = useState(likes)
     const UpLike = () => {
@@ -27,7 +25,7 @@ export const Tweet = ({info}) => {
 
             <div className="right">
                 <div className="content-img">
-                    <img src={url} atl="img"/>
+                    <img src={process.env.PUBLIC_URL + url} atl="img"/>
                 </div>
             </div>
 

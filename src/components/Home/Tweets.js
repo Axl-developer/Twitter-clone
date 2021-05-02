@@ -7,7 +7,7 @@ export const Tweets = [
         time:'1h',
         nombre:"Google",
         retweets:66,tweet_nom:"@Google",
-        url:"./assets/perfil/mvBRhlDs.jpg",
+        url:"/assets/perfil/mvBRhlDs.jpg",
         imgs:[{id:1,url:'/assets/imgs/pexels-huy-phan-1474237.jpg'}]
     },
     {

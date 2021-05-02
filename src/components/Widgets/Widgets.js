@@ -1,10 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { SingleWidget } from './SingleWidget'
+import { TendenciasPeru,QuienSeguir } from './Tendencias'
 
 export const Widgets = () => {
-
-    const ref = useRef()
-    let toFixed = 0
 
     return (
         <div className="Widgets__content">
@@ -16,9 +14,9 @@ export const Widgets = () => {
             </form>
 
             <div style={{position:'relative'}}>
-                <SingleWidget title={'Tendencias'} items={[1,2,3,4,5]}/>
+                <SingleWidget title={'Tendencias'} items={TendenciasPeru}/>
 
-                <SingleWidget title={'A quién seguir'} items={[1,2]}/>
+                <SingleWidget title={'A quién seguir'} items={QuienSeguir}/>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header } from '../Headers/Header'
+import { QueEstaPasando, TendenciasPeru } from '../Widgets/Tendencias'
 import { ListItem } from './ListItem'
 
 export const Explore = () => {
@@ -12,9 +13,9 @@ export const Explore = () => {
                     <h1>COVID-19 actualizaciones para EE.UU.</h1>
                 </div>
             </div>
-            <ListItem title={'Tendencias para ti'}  Trend={true}/>
+            <ListItem title={'Tendencias para ti'}  Trend={true} Items={TendenciasPeru}/>
 
-            <ListItem title={'¿Qué está pasando?'} />
+            <ListItem title={'¿Qué está pasando?'} Items={QueEstaPasando}/>
         </div>
     )
 }

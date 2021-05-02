@@ -14,41 +14,52 @@ export const TweetScreen = () => {
     const {id,answers,body,likes,time,nombre,retweets,tweet_nom,url,imgs} = info
 
     const [Like, setLike] = useState(false)
+    const [ContLike, setContLike] = useState(likes)
 
-    
+    const UpLike = () => {
+        if(Like)
+            {
+                setLike(!Like)
+                setContLike(ContLike-1)
+            }
+        else{
+                setLike(!Like)
+                setContLike(ContLike+1)
+            }
+    }
 
     const comments = [
         {id:1,
-        nombre:'name',
+        nombre:'Juanjo',
         answers:10,
         likes:478,
         retweets:66,
-        tweet_nom:'@name',
+        tweet_nom:'@juanOr',
         time:'5h',
         body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
-        url:"https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg",
+        url:"/assets/perfil/pexels-simon-robben-614810.jpg",
         imgs:[]},
 
         {id:2,
-        nombre:'name',
-        answers:10,
-        likes:478,
-        retweets:66,
-        tweet_nom:'@name',
-        time:'5h',
+        nombre:'Victor',
+        answers:4,
+        likes:322,
+        retweets:50,
+        tweet_nom:'@VicGo',
+        time:'7h',
         body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
-        url:"https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg",
+        url:"/assets/perfil/pexels-stefan-stefancik-91227.jpg",
         imgs:[]},
 
         {id:3,
-        nombre:'name',
-        answers:10,
-        likes:478,
-        retweets:66,
-        tweet_nom:'@name',
-        time:'5h',
+        nombre:'William',
+        answers:11,
+        likes:257,
+        retweets:47,
+        tweet_nom:'@william',
+        time:'8h',
         body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
-        url:"https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg",
+        url:"/assets/perfil/pexels-stefan-stefancik-91224.jpg",
         imgs:[]},
     ]
     
@@ -60,7 +71,7 @@ export const TweetScreen = () => {
 
                 <div className="screenTweet__HeadTweet">
                     <div className="content-img">
-                        <img src="https://pbs.twimg.com/profile_images/1278376724900786182/zXbHm9d-_x96.jpg" atl="img"/>
+                        <img src={url} atl="img"/>
                     </div>
                     <div className="screenTweet__names">
                         <h1 className="bold">{nombre}</h1>
@@ -99,7 +110,7 @@ export const TweetScreen = () => {
                             <span className="lighter">Retweets</span>
                             <h1 className="bold">{answers}</h1>
                             <span className="lighter">Citar Tweet</span>
-                            <h1 className="bold">{likes}</h1>
+                            <h1 className="bold">{ContLike}</h1>
                             <span className="lighter">Me gusta</span>   
                         </div>
                     </div>
@@ -114,7 +125,7 @@ export const TweetScreen = () => {
                         <svg viewBox="0 0 24 24"><g><path d="M23.77 15.67c-.292-.293-.767-.293-1.06 0l-2.22 2.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414 0-.75.336-.75.75s.336.75.75.75h5.85c1.24 0 2.25 1.01 2.25 2.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06 0s-.294.768 0 1.06l3.5 3.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767 0-1.06zm-10.66 3.28H7.26c-1.24 0-2.25-1.01-2.25-2.25V6.46l2.22 2.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768 0-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06 0l-3.5 3.5c-.294.292-.294.767 0 1.06s.767.293 1.06 0l2.22-2.22V16.7c0 2.068 1.683 3.75 3.75 3.75h5.85c.414 0 .75-.336.75-.75s-.337-.75-.75-.75z"></path></g></svg>
                     </div>
 
-                    <div onClick={() => setLike(!Like)} className={(Like)?"like" :null}>
+                    <div onClick={UpLike} className={(Like)?"like" :null}>
                         {
                             (Like)
                             ?<svg viewBox="0 0 24 24"><g><path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z"></path></g></svg>

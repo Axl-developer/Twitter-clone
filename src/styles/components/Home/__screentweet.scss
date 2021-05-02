@@ -56,6 +56,28 @@
             }
             
         }
+
+        .ThreeImgs{
+            @extend .TwoImgs;
+                width: 100%;
+
+                .IndividualImg{
+                    width: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    margin-right: 2px;
+                }
+                .DoubleImgs{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    img{
+                        height: 50%;
+                        margin-bottom: 2px;
+                    }
+                }
+        }
     }
 
     .screenTweet__times{
@@ -98,9 +120,22 @@
             margin-left: 10px;
         }
     }
+    .like{
+        svg {
+            fill: #E0245E;
+        }
+    }
 }
 
 
 .screenTweet__comments{
     border-top:1px solid getColor(border) ;
+}
+
+@media(min-width:720px){
+    .screenTweet__tweet{
+        .img-content{
+            height: auto;
+        }
+    }
 }
