@@ -4,7 +4,6 @@ import { ListNotifications } from './ListNotifications'
 import {Mentions} from './Mentions'
 
 export const Notifications = () => {
-    const Items = [1,2,3,4,5]
 
     const [Todo, setTodo] = useState(true)
     return (

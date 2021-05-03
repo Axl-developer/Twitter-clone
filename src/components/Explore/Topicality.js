@@ -11,7 +11,7 @@ export const Topicality = ({single}) => {
             </div>
 
             <div className="Explore__img_content">
-                <img src={process.env.PUBLIC_URL + single.url} atl="img"/>    
+                <img src={process.env.PUBLIC_URL + single.url} alt="img"/>    
             </div>
         </div>
     )

@@ -25,7 +25,7 @@ export const Tweet = ({info}) => {
 
             <div className="right">
                 <div className="content-img">
-                    <img src={process.env.PUBLIC_URL + url} atl="img"/>
+                    <img src={process.env.PUBLIC_URL + url} alt="img"/>
                 </div>
             </div>
 

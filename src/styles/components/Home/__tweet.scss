@@ -22,7 +22,7 @@
     }
 
     .left{
-        max-width: 80%;
+        width: 80%;
         .img-content{
             
             width: auto;
@@ -125,7 +125,7 @@
 
 @media(min-width:720px){
     .left{
-        max-width: 90% !important;
+        width: 90% !important;
     }
     .TwoImgs{
 

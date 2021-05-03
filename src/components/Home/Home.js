@@ -10,6 +10,7 @@ export const Home = () => {
 
     const [Mobile, setIsMobile] = useState(true)
 
+    const [ArrTweets, setArrTweets] = useState(Tweets)
 
     useEffect(() => {
         const isMobile = IsMobile();
@@ -26,26 +27,17 @@ export const Home = () => {
         
     });
 
-
-    //----------------------------------------------------
-
-    
-    
-    
-    console.log('render')
-    
-
     return (
         <div>
             <Header title={'Inicio'} destacados={true}/>
 
             {
-                (!Mobile) && <NewTweet />
+                (!Mobile) && <NewTweet setArrTweets={setArrTweets} />
             }
 
             
             {
-                Tweets.map( T=> <Tweet key={T.id} info={T}/>)
+                ArrTweets.map( T=> <Tweet key={T.id} info={T}/>)
             }
 
 

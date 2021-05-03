@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useForm } from '../../hooks/useForm'
 
 
-export const NewTweet = () => {
+export const NewTweet = ({setArrTweets}) => {
 
-    console.log('me reactive :c')
-
-    const [state, setState] = useState('')
+    const [id, setId] = useState(12)
 
     const [values, handleInputChange] = useForm({
         tweet:''
@@ -15,31 +13,33 @@ export const NewTweet = () => {
 
     const {tweet} = values
 
-    const write = (e) => {
-        setState(e.target.value)
-        console.log(state)
+    const New_Tweet= {
+        id:id,
+        answers:0,
+        body:tweet,
+        likes:0,
+        time:'Ahora',
+        nombre:"Usuario",
+        retweets:0,tweet_nom:"@user",
+        url:"/assets/perfil/pexels-ekrulila-4040433.jpg",
+        imgs:[]
     }
 
-    useEffect(() => {
-        if(tweet.length <= 200){
-            console.log('valido')
-        }else{
-            console.log('invalido')
+    const Addtweet = () => {
+        
+
+        if(tweet.length > 0){
+            setArrTweets(c => [New_Tweet,...c])
+            setId(id+1)
         }
-
-    }, [tweet])
-
-
-    const icon = {
-            strokeDashoffset: 56.7408,
-            strokeDasharray: 56.5487,
     }
+
     return (
-        <div className="newTweet__content__newTweet">
+        <div className="newTweet__content__newTweet" id="NewTweet">
             <div className="newTweet__Tweet">
                 <div>
                     <div className="newTweet__img_content">
-                        <img src="https://pbs.twimg.com/profile_images/1278376724900786182/zXbHm9d-_x96.jpg" atl="img"/>    
+                        <img src={ process.env.PUBLIC_URL +  "/assets/perfil/pexels-ekrulila-4040433.jpg"} alt="img"/>    
                     </div>
                 </div>
 
@@ -47,7 +47,6 @@ export const NewTweet = () => {
                 <div className="newTweet__Tweet_text">
 
                     <textarea
-                        onChange={(e) => write(e)}
                         type="text"
                         id="textarea"
                         value={tweet}
@@ -92,7 +91,7 @@ export const NewTweet = () => {
                         </div>
 
                         <div className="newTweet__contentBtn">
-                            <button className="btn btn_secondary">Tweetear</button>
+                            <button onClick={Addtweet} className="btn btn_secondary">Tweetear</button>
                         </div>
                     </div>
 

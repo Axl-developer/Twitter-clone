@@ -29,7 +29,7 @@ export const ImgsContents = ({idtweet,imgs}) => {
 export const SingleImg = ({img}) => {
     return (
         <div className="SingleImg">
-            <img key={img[0].id} src={process.env.PUBLIC_URL + img[0].url} atl="img"/>
+            <img key={img[0].id} src={process.env.PUBLIC_URL + img[0].url} alt="img"/>
         </div>
     )
 }
@@ -38,7 +38,7 @@ export const TwoTmgs = ({imgs}) => {
     return (
         imgs.map(img =>
             <div className="TwoImgs" key={img.id}>
-                <img src={process.env.PUBLIC_URL + img.url} atl="img"/>
+                <img src={process.env.PUBLIC_URL + img.url} alt="img"/>
             </div>
         )
     )
@@ -48,11 +48,11 @@ export const ThreeTmgs = ({imgs}) => {
     return (
         <div className="ThreeImgs">
             <div className="IndividualImg">
-                <img key={imgs[0].id} src={process.env.PUBLIC_URL + imgs[0].url} atl="img"/>
+                <img key={imgs[0].id} src={process.env.PUBLIC_URL + imgs[0].url} alt="img"/>
             </div>
             <div className="DoubleImgs">
-                <img key={imgs[1].id} src={process.env.PUBLIC_URL + imgs[1].url} atl="img"/>
-                <img key={imgs[2].id} src={process.env.PUBLIC_URL + imgs[2].url} atl="img"/>
+                <img key={imgs[1].id} src={process.env.PUBLIC_URL + imgs[1].url} alt="img"/>
+                <img key={imgs[2].id} src={process.env.PUBLIC_URL + imgs[2].url} alt="img"/>
             </div>
         </div>
     )
@@ -63,7 +63,7 @@ export const FourTmgs = ({imgs}) => {
         <div className="FourImgs">
             {
                 imgs.map(img =>
-                        <img key={img.id} src={process.env.PUBLIC_URL + img.url} atl="img"/>)
+                        <img key={img.id} src={process.env.PUBLIC_URL + img.url} alt="img"/>)
             }
         </div>
     )

@@ -1,5 +1,4 @@
 import React from 'react'
-import { TendenciasPeru } from '../Widgets/Tendencias'
 import { Topicality } from './Topicality'
 import {Trends} from './Trends'
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { IsMobile } from '../../helpers/IsMobile'
 import {Sidebar} from './Sidebar'
 
-export const Header = ({search = false, title = false, config=false, destacados=false}) => {
+export const Header = ({img= true,search = false, title = false, config=false, destacados=false}) => {
 
     const mobile = IsMobile()
     
@@ -10,9 +10,11 @@ export const Header = ({search = false, title = false, config=false, destacados=
 
     return (
         <header className="header__content">
-            <div className="header__img_content" onClick={(!!mobile)?() => {setSidebar(!IsSidebar)}:null}>
-                <img src="https://pbs.twimg.com/profile_images/1278376724900786182/zXbHm9d-_x96.jpg" atl="img"/>    
-            </div>
+            {
+                (img) && <div className="header__img_content" onClick={(!!mobile)?() => {setSidebar(!IsSidebar)}:null}>
+                            <img src={ process.env.PUBLIC_URL +  "/assets/perfil/pexels-ekrulila-4040433.jpg"} alt="img"/>    
+                        </div>
+            }
             {
                 (title) && <h1>{title}</h1>
             }
@@ -36,7 +38,7 @@ export const Header = ({search = false, title = false, config=false, destacados=
             }
 
             {
-                (!!IsSidebar) ?<Sidebar />:null
+                (!!IsSidebar) ?<Sidebar setSidebar={setSidebar}/>:null
             }
         </header>
     )

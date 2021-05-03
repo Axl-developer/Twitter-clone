@@ -1,7 +1,6 @@
 import React from 'react'
-import { ListasItem } from './ListasItem'
 
-export const Lists = ({title,listas,mensaje,setList}) => {
+export const Lists = ({title,listas,mensaje,setList,Component}) => {
     return (
         <div className="Lists__content">
             <div> 
@@ -13,7 +12,7 @@ export const Lists = ({title,listas,mensaje,setList}) => {
                     (listas.length >= 1)
                         ?<div className="Lists__mapListas">
                             {
-                                listas.map(lista => <ListasItem key={lista.id} lista={lista} setList={setList}/>)
+                                listas.map(lista => <Component key={lista.id} lista={lista} setList={setList}/>)
                             }
                         </div>
                         

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-export const ListasItem = ({lista,setList}) => {
+export const MyList = ({lista,setList}) => {
 
-    const [Siguiendo, setSiguiendo] = useState(false)
+    const [Fijado, setFijado] = useState(false)
 
-    const Seguir = () => {
+    const Fijar = () => {
         setList(c => [lista,...c])
-        setSiguiendo(!Siguiendo)
+        setFijado(!Fijado)
     }
     
 
@@ -24,8 +24,8 @@ export const ListasItem = ({lista,setList}) => {
                 </div>
             </div>
 
-            <button className={ (!Siguiendo)?"btn btn_primary":"btn btn_secondary"} onClick={(!Siguiendo)?Seguir:null}>
-                {(!Siguiendo)?"Seguir":"Siguiendo"}
+            <button className={ (!Fijado)?"btn btn_primary":"btn btn_secondary"} onClick={(!Fijado)?Fijar:null}>
+                {(!Fijado)?"Fijar":"Fijado"}
             </button>
         </div>
     )

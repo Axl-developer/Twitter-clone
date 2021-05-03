@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Perfil_Tweets = () => {
+export const PerfilTweets = () => {
     return (
         <div>
             

@@ -52,7 +52,10 @@
 
     .Widgets__more{
         font-size: 15px;
-        color:getColor(primary)
+        color:getColor(primary);
+        background: none;
+        border: none;
+        text-align: left;
     }
 }
 

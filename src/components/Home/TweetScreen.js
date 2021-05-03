@@ -11,7 +11,7 @@ export const TweetScreen = () => {
     const {tweetid} = useParams()
 
     const info = GetTweetById(Tweets,Number(tweetid))
-    const {id,answers,body,likes,time,nombre,retweets,tweet_nom,url,imgs} = info
+    const {id,answers,body,likes,nombre,retweets,tweet_nom,url,imgs} = info
 
     const [Like, setLike] = useState(false)
     const [ContLike, setContLike] = useState(likes)
@@ -71,7 +71,7 @@ export const TweetScreen = () => {
 
                 <div className="screenTweet__HeadTweet">
                     <div className="content-img">
-                        <img src={url} atl="img"/>
+                        <img src={url} alt="img"/>
                     </div>
                     <div className="screenTweet__names">
                         <h1 className="bold">{nombre}</h1>

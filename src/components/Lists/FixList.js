@@ -1,14 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const ListasItem = ({lista,setList}) => {
-
-    const [Siguiendo, setSiguiendo] = useState(false)
-
-    const Seguir = () => {
-        setList(c => [lista,...c])
-        setSiguiendo(!Siguiendo)
-    }
-    
+export const FixList = ({lista}) => {
 
     return (
         <div className="Lists__ListaItem">
@@ -24,8 +16,8 @@ export const ListasItem = ({lista,setList}) => {
                 </div>
             </div>
 
-            <button className={ (!Siguiendo)?"btn btn_primary":"btn btn_secondary"} onClick={(!Siguiendo)?Seguir:null}>
-                {(!Siguiendo)?"Seguir":"Siguiendo"}
+            <button className="btn btn btn_secondary">
+                Fijado
             </button>
         </div>
     )

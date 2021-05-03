@@ -43,5 +43,4 @@ export const Tweets = [
         url:"/assets/perfil/_qzIlQPl_normal.jpg",
         imgs:[{id:5,url:'/assets/imgs/pexels-fox-1445238.jpg'},{id:6,url:'/assets/imgs/pexels-fox-2106216.jpg'},{id:7,url:'/assets/imgs/pexels-thiago-japyassu-4068701.jpg'}]
     }
-    
 ]
