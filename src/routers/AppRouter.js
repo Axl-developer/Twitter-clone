@@ -28,7 +28,7 @@ export const AppRouter = () => {
     return (
         <Router>
             <div style={{display:'flex'}} className="container">
-                
+
                 <MenuSelector />
 
                 <DashboardRouter />
