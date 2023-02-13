@@ -52,7 +52,7 @@
 
     .Widgets__more{
         font-size: 15px;
-        color:getColor(primary);
+        color:var(--color-primary);
         background: none;
         border: none;
         text-align: left;
@@ -71,7 +71,7 @@
     padding: 12px 16px;
 
     &:hover{
-        background: rgba($color: #fff, $alpha: 0.03);
+        background: rgba($color: var(--color-white), $alpha: 0.03);
         cursor: pointer;
     }
     

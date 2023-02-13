@@ -32,7 +32,7 @@
     svg{
         width: 21px;
         height: 21px;
-        fill:getColor(primary)
+        fill:var(--color-primary)
     }
 
     form{

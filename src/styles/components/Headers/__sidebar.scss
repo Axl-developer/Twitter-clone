@@ -56,7 +56,7 @@
             align-items: center;
             
             svg{
-                fill:#6e767d;
+                fill:var(--color-greySecond);
                 margin-right: 12px;
             }
             .names{
@@ -68,10 +68,10 @@
 
         .active{
             svg{
-                fill:getColor(primary)
+                fill:var(--color-primary)
             }
             .names{
-                color:getColor(primary)
+                color:var(--color-primary)
             }
         }
     }

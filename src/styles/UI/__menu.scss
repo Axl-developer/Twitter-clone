@@ -9,7 +9,7 @@
     position: absolute;
     top: -77px;
     right: 19px;
-    background-color: getColor(primary);
+    background-color: var(--color-primary);
     width: 61px;
     height: 61px;
     border-radius: 50%;
@@ -20,7 +20,7 @@
     svg{
         width: 22px;
         height: 20px;
-        fill: #fff;
+        fill: var(--color-white);
     }
 }
 .UI__nav{
@@ -42,12 +42,12 @@
             .active{
                 div{
                     svg{
-                        fill:getColor(primary)
+                        fill:var(--color-primary)
                     }
                 }
 
                 h1{
-                    color:getColor(primary);
+                    color:var(--color-primary);
                 }
                 
             }
@@ -68,7 +68,7 @@
             svg{
                 height: 26px;
                 width: 26px;
-                fill:#5B7083
+                fill:var(--color-grey)
             }
            }
         }
@@ -114,7 +114,7 @@
             svg{
                 width: 44px;
                 height: 28px;
-                fill:#fff;
+                fill:var(--color-white);
             }
 
             .content-img{
@@ -215,7 +215,7 @@
         padding: 12px;
 
         &:hover{
-            background-color: rgba($color: #1DA1F2, $alpha: 0.1)
+            background-color: rgba($color: var(--color-primary), $alpha: 0.1)
         }
         
 

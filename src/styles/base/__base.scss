@@ -51,13 +51,13 @@ li{
 }
 
 .btn_primary{
-    border: 1px solid getColor(primary);
-    color:getColor(primary);
+    border: 1px solid var(--color-primary);
+    color:var(--color-primary);
 }
 .btn_secondary{
-    background-color: getColor(primary);
-    border: 1px solid getColor(primary);
-    color:#fff;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    color:var(--color-white);
 }
 
 @media(min-width:600px){

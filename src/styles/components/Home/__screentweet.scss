@@ -113,7 +113,7 @@
 
         svg{
             width: 1.25em;
-            fill:#5B7083;
+            fill:var(--color-grey);
         }
 
         span{
@@ -122,7 +122,7 @@
     }
     .is-active{
         svg {
-            fill: #E0245E;
+            fill: var(--color-red);
         }
     }
 }

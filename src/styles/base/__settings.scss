@@ -28,13 +28,18 @@ $colors:(
     textSecondary-dark:#6E767D,
 
     widgetBackground:#f7f9fa,
-    widgetBackground-dark:#15181C
+    widgetBackground-dark:#15181C,
+
+    //colors
+    white:#fff,
+    grey:#5B7083,
+    greySecond:#6e767d,
+    red:#E0245E
     
 );
 
 //dark mode
 $colors-dark:(
-    primary:map-get($colors, #1DA1F2),
     theme:map-get($colors, theme-black),
     border:map-get($colors, border-dark),
     border2:map-get($colors, border-dark2),

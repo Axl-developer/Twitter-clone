@@ -6,7 +6,7 @@
         flex: 1;
         display: flex;
         justify-content: center;
-        color:getColor(primary);
+        color:var(--color-primary);
         font-weight: bold;
         font-size: 14px;
         border-bottom: 2px solid getColor(border);
@@ -14,7 +14,7 @@
     }
 
     .active{
-        border-bottom: 2px solid getColor(primary);
+        border-bottom: 2px solid var(--color-primary);
     }
 }
 
