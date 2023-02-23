@@ -1,0 +1,22 @@
+.retweet{
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    margin-top: 12px;
+
+    &__head{
+        padding: 12px;
+    }
+    &__person{
+        display: flex;
+        margin-bottom: 4px;
+    }
+
+    .content-img{//convertir a tomico
+        border-radius: 50%;
+        display: block;
+        overflow: hidden;
+        margin-right: 4px;
+        height: 19px;
+        width: 19px;
+    }
+}

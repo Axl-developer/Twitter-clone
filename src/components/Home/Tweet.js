@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+
 import Icons from '../icons'
 import { ImgsContents } from './ImgsContents'
+import { Retweet } from './Retweet'
 
 export const Tweet = ({info}) => {
     
     const [Like, setLike] = useState(false)
-    const {id,answers,body,likes,time,nombre,retweets,tweet_nom,url,imgs} = info
+    const {id,answers,body,likes,time,name,retweets,tweet_name,url,imgs,retweet} = info
 
     const [ContLike, setContLike] = useState(likes)
     const UpLike = () => {
@@ -32,14 +34,14 @@ export const Tweet = ({info}) => {
 
             <div className="left">
                 <div>
-                    <span className="bold">{nombre}</span> <span className="lighter">{tweet_nom} · {time}</span>
+                    <span className="bold">{name}</span> <span className="lighter">{tweet_name} · {time}</span>
                 </div>
 
                 <div className="content_Tweet">
                     {body}
                 </div>
-                {(imgs.length >= 1)
-                    ?<NavLink to={`/home/${id}`}>
+                {(imgs) &&
+                    <NavLink to={`/home/${id}`}>
                         <div className={(imgs.length === 1)?"img-content":"imgs-content"}>
                             
                             {
@@ -50,8 +52,12 @@ export const Tweet = ({info}) => {
                             
                         </div>
                     </NavLink>
-                    :''
                 }
+                
+                {
+                    retweet && <Retweet {...retweet}/>
+                }
+
                 <div className="content_actions">
                     <div>
                         <Icons.IconAswer />

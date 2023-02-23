@@ -85,19 +85,15 @@ export const TweetScreen = () => {
                     {body}
                     </div>
                     
-                    {(imgs.length >= 1)
-                    ?
+                    {(imgs) &&
                         <div className={(imgs.length === 1)?"img-content":"imgs-content"}>
-                            
                             {
                                 (imgs.length >= 1)
                                 ?<ImgsContents idtweet={id} imgs={imgs} />
                                 : null
                             }
-                            
                         </div>
-                    :''
-                }
+                    }
 
                     <div className="screenTweet__times">
                         <span className="lighter">9:14 p.m - 15 abr 2021 Twitter for iPhone</span>

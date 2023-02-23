@@ -23,8 +23,9 @@ li{
 }
 
 .lighter{
-    font-weight: 400;
     color: getColor(textSecondary);
+    font-weight: 400;
+    margin-left: 4px;
 }
 
 .content-img{
