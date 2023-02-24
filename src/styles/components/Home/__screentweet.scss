@@ -28,58 +28,6 @@
         color:getColor(textPrimary);
         font-size: 23px;
     }
-
-    .img-content{
-        margin-top: 12px;
-        width: auto;
-        height: 182px;
-        border-radius: 16px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        img{
-            width: auto;
-            height: 100%;
-        }
-    }
-    .imgs-content{
-        @extend .img-content;
-
-        .TwoImgs{
-            width: 50%;
-            height: 100% !important;
-            display: flex;
-            justify-content: center;
-            overflow: hidden;
-            &:first-child{
-                margin-right: 2px;
-            }
-            
-        }
-
-        .ThreeImgs{
-            @extend .TwoImgs;
-                width: 100%;
-
-                .IndividualImg{
-                    width: 50%;
-                    overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    margin-right: 2px;
-                }
-                .DoubleImgs{
-                    width: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    img{
-                        height: 50%;
-                        margin-bottom: 2px;
-                    }
-                }
-        }
-    }
-
     .screenTweet__times{
         padding: 16px 0;
         border-bottom:1px solid getColor(border) ;
@@ -130,12 +78,4 @@
 
 .screenTweet__comments{
     border-top:1px solid getColor(border) ;
-}
-
-@media(min-width:720px){
-    .screenTweet__tweet{
-        .img-content{
-            height: auto;
-        }
-    }
 }

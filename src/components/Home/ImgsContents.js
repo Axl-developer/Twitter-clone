@@ -1,70 +1,48 @@
 import React from 'react'
 
-export const ImgsContents = ({idtweet,imgs}) => {
+export const ImgContent = ({imgs}) => {
 
-    switch (imgs.length) {
-        case 1:
-            
-            return <SingleImg img={imgs} />
-        
-        case 2:
-            
-            return <TwoTmgs imgs={imgs} />
-        
-        case 3:
-            
-            return <ThreeTmgs imgs={imgs} />
+    const length = imgs.length
 
-        case 4:
-            
-            return <FourTmgs imgs={imgs} />
-    
-        default:
-            return
+    const getContent = () => {
+        switch (length) {
+            case 1:
+                return 'is-single';
+            case 2:
+                return 'is-double';
+            case 3:
+                return 'is-triple'
+            default:
+                return 'is-multiple';
+        }
     }
 
-}
+    const getSize = (index) => {
+        switch (length) {
+            case 1:
+                return 'is-full';
+        
+            case 2:
+                return 'is-large';
+            case 3:
+                if(index === 0){
+                    return 'is-large'
+                }else{
+                    return 'is-short'
+                }
+            default:
+                return 'is-short';
+        }
+    }
 
-
-export const SingleImg = ({img}) => {
-    return (
-        <div className="SingleImg">
-            <img key={img[0].id} src={process.env.PUBLIC_URL + img[0].url} alt="img"/>
-        </div>
-    )
-}
-
-export const TwoTmgs = ({imgs}) => {
-    return (
-        imgs.map(img =>
-            <div className="TwoImgs" key={img.id}>
-                <img src={process.env.PUBLIC_URL + img.url} alt="img"/>
-            </div>
-        )
-    )
-}
-
-export const ThreeTmgs = ({imgs}) => {
-    return (
-        <div className="ThreeImgs">
-            <div className="IndividualImg">
-                <img key={imgs[0].id} src={process.env.PUBLIC_URL + imgs[0].url} alt="img"/>
-            </div>
-            <div className="DoubleImgs">
-                <img key={imgs[1].id} src={process.env.PUBLIC_URL + imgs[1].url} alt="img"/>
-                <img key={imgs[2].id} src={process.env.PUBLIC_URL + imgs[2].url} alt="img"/>
-            </div>
-        </div>
-    )
-}
-
-export const FourTmgs = ({imgs}) => {
-    return (
-        <div className="FourImgs">
-            {
-                imgs.map(img =>
-                        <img key={img.id} src={process.env.PUBLIC_URL + img.url} alt="img"/>)
-            }
-        </div>
-    )
+  return (
+    <div className={`img-content ${getContent()}`}>
+        {
+            imgs.map( (img,index) =>
+                <div className={getSize(index)} key={index} style={{ backgroundImage: `url(${process.env.PUBLIC_URL + img.url})` }}>
+                </div>
+            )
+        }
+    </div>
+  )
 }

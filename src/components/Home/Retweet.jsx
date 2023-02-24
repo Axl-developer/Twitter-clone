@@ -1,4 +1,5 @@
 import React from 'react'
+import { ImgContent } from './ImgsContents'
 
 //{process.env.PUBLIC_URL + url}
 
@@ -17,6 +18,7 @@ export const Retweet = ({url,name,tweet_name,time,body,imgs}) => {
                 {body}
             </div>
         </div>
+            {imgs && <ImgContent imgs={imgs}/>}
     </div>
   )
 }

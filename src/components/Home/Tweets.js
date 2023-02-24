@@ -8,15 +8,15 @@ export const Tweets = [
         name:"Google",
         retweets:66,tweet_name:"@Google",
         url:"/assets/perfil/mvBRhlDs.jpg",
+        imgs:[{id:1,url:'/assets/imgs/pexels-huy-phan-1474237.jpg'}],
         retweet:{
             id:0,
-            answers:10,
-            body:"As millions of people welcome Ramadan, discover how different cultures around the world celebrate the month with #GoogleRamadanBingo",
-            likes:478,
-            time:'1h',
-            name:"Google",
-            retweets:66,tweet_name:"@Google",
-            url:"/assets/perfil/mvBRhlDs.jpg",
+            body:"From learning Navigation with Compose and Lists to creating designs that were fully functional Compose, you earned it @blundell_apps! #AndroidDevChallenge",
+            time:'6h',
+            name:"Android Developers",
+            tweet_name:"@AndroidDev",
+            url:"/assets/perfil/VRtfrDXq_x96.png",
+            imgs:[{id:2,url:'/assets/imgs/pexels-mihis-alex-21022.jpg'},{id:3,url:'/assets/imgs/pexels-thorn-yang-441794.jpg'}]
         }
     },
     {

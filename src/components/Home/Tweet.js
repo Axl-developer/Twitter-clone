@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import Icons from '../icons'
-import { ImgsContents } from './ImgsContents'
+import { ImgContent } from './ImgsContents'
 import { Retweet } from './Retweet'
 
 export const Tweet = ({info}) => {
@@ -40,17 +40,9 @@ export const Tweet = ({info}) => {
                 <div className="content_Tweet">
                     {body}
                 </div>
-                {(imgs) &&
+                {imgs &&
                     <NavLink to={`/home/${id}`}>
-                        <div className={(imgs.length === 1)?"img-content":"imgs-content"}>
-                            
-                            {
-                                (imgs.length >= 1)
-                                ?<ImgsContents idtweet={id} imgs={imgs} />
-                                : null
-                            }
-                            
-                        </div>
+                        <ImgContent imgs={imgs}/>
                     </NavLink>
                 }
                 
