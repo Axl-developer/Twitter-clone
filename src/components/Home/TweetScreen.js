@@ -4,6 +4,7 @@ import { GetTweetById } from '../../helpers/getTweetByid'
 import { Header } from '../Headers/Header'
 import Icons from '../icons'
 import { ImgContent } from './ImgsContents'
+import { Retweet } from './Retweet'
 import { Tweet } from './Tweet'
 import { Tweets } from './Tweets'
 
@@ -12,7 +13,7 @@ export const TweetScreen = () => {
     const {tweetid} = useParams()
 
     const info = GetTweetById(Tweets,Number(tweetid))
-    const {id,answers,body,likes,name,retweets,tweet_name,url,imgs} = info
+    const {id,answers,body,retweet,likes,name,retweets,tweet_name,url,imgs} = info
 
     const [Like, setLike] = useState(false)
     const [ContLike, setContLike] = useState(likes)
@@ -88,6 +89,9 @@ export const TweetScreen = () => {
                     
                     {imgs && <ImgContent imgs={imgs}/>}
 
+                    {
+                        retweet && <Retweet {...retweet}/>
+                    }
                     <div className="screenTweet__times">
                         <span className="lighter">9:14 p.m - 15 abr 2021 Twitter for iPhone</span>
                     </div>

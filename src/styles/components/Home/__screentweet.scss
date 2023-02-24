@@ -26,7 +26,9 @@
 
     .screenTweet__content{
         color:getColor(textPrimary);
-        font-size: 23px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 20px;
     }
     .screenTweet__times{
         padding: 16px 0;

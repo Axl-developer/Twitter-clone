@@ -40,7 +40,9 @@ export const Tweet = ({info}) => {
                 <div className="content_Tweet">
                     {body}
                 </div>
-                {imgs &&
+                
+                {
+                    imgs &&
                     <NavLink to={`/home/${id}`}>
                         <ImgContent imgs={imgs}/>
                     </NavLink>

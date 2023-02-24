@@ -62,5 +62,16 @@ export const Tweets = [
         retweets:96,tweet_name:"@Xbox",
         url:"/assets/perfil/_qzIlQPl_normal.jpg",
         imgs:[{id:5,url:'/assets/imgs/pexels-fox-1445238.jpg'},{id:6,url:'/assets/imgs/pexels-fox-2106216.jpg'},{id:7,url:'/assets/imgs/pexels-thiago-japyassu-4068701.jpg'}]
+    },
+    {
+        id:5,
+        answers:8,
+        body:"Check out @Xbox’s Earth Day celebration activities and learn how you can get involved:",
+        likes:622,
+        time:'3h',
+        name:"Xboxer",
+        retweets:96,tweet_name:"@Xbox",
+        url:"/assets/perfil/_qzIlQPl_normal.jpg",
+        imgs:[{id:5,url:'/assets/imgs/pexels-fox-1445238.jpg'},{id:6,url:'/assets/imgs/pexels-fox-2106216.jpg'},{id:7,url:'/assets/imgs/pexels-thiago-japyassu-4068701.jpg'},{id:8,url:'/assets/imgs/pexels-fox-1445238.jpg'},{id:9,url:'/assets/imgs/pexels-fox-2106216.jpg'}]
     }
 ]

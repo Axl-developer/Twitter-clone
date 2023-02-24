@@ -35,12 +35,27 @@ export const ImgContent = ({imgs}) => {
         }
     }
 
+    const isMultiple = (index) => {
+        if(index > 2 && imgs.length > 4){
+            return true
+        }else{
+            return ''
+        }
+    }
+
   return (
     <div className={`img-content ${getContent()}`}>
         {
             imgs.map( (img,index) =>
-                <div className={getSize(index)} key={index} style={{ backgroundImage: `url(${process.env.PUBLIC_URL + img.url})` }}>
-                </div>
+                (index < 4) &&
+                    <div
+                        className={`${getSize(index)} ${ isMultiple(index) && 'is-more'}`}
+                        key={index}
+                        style={{ backgroundImage: `url(${process.env.PUBLIC_URL + img.url})` }}>
+                            {
+                                isMultiple(index)  && <span>{`${imgs.length - 4}+`}</span>
+                            }
+                    </div>
             )
         }
     </div>
