@@ -32,7 +32,7 @@ export const Home = () => {
             <Header title={'Inicio'} destacados={true}/>
 
             {
-                (!Mobile) && <NewTweet setArrTweets={tweets} />
+                (!Mobile) && <NewTweet />
             }
 
             

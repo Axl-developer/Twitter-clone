@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addTweet } from '../../features/counter/tweetsSlice'
 import { useForm } from '../../hooks/useForm'
 import Icons from '../icons'
 
 
-export const NewTweet = ({setArrTweets}) => {
+export const NewTweet = () => {
+   
+    const dispatch = useDispatch()
 
     const [id, setId] = useState(12)
 
     const [values, handleInputChange, reset] = useForm({
         tweet:''
     })
+
 
     const {tweet} = values
 
@@ -29,7 +34,7 @@ export const NewTweet = ({setArrTweets}) => {
         reset();
 
         if(tweet.length > 0){
-            setArrTweets(c => [New_Tweet,...c])
+            dispatch(addTweet(New_Tweet))
             setId(id+1)
         }
     }

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import { updateTweet } from '../../features/counter/tweetsSlice'
 
 import Icons from '../icons'
 import { ImgContent } from './ImgsContents'
@@ -7,20 +9,24 @@ import { Retweet } from './Retweet'
 
 export const Tweet = ({info}) => {
     
-    const [Like, setLike] = useState(false)
-    const {id,answers,body,likes,time,name,retweets,tweet_name,url,imgs,retweet} = info
+    const dispatch = useDispatch();
 
-    const [ContLike, setContLike] = useState(likes)
+    const {id,answers,body,likes,isLikeMe,time,name,retweets,tweet_name,url,imgs,retweet} = info
+
     const UpLike = () => {
-        if(Like)
-            {
-                setLike(!Like)
-                setContLike(ContLike-1)
-            }
-        else{
-                setLike(!Like)
-                setContLike(ContLike+1)
-            }
+
+        let upLike;
+        let isUp;
+
+        if(isLikeMe){
+            upLike = false
+            isUp = likes -1
+        }else {
+            upLike = true
+            isUp = likes + 1
+        }
+
+        dispatch(updateTweet({...info,isLikeMe:upLike,likes:isUp}))
     }
 
     return (
@@ -63,13 +69,13 @@ export const Tweet = ({info}) => {
                         <span className="lighter">{retweets}</span>
                     </div>
 
-                    <div onClick={UpLike} className={(Like)?"is-active" :null}>
+                    <div onClick={UpLike} className={(isLikeMe)?"is-active" :null}>
                         {
-                            (Like)
+                            (isLikeMe)
                             ?<Icons.IconLike />
                             :<Icons.IconLikeFull />
                         }
-                        <span className="lighter">{ContLike}</span>
+                        <span className="lighter">{likes}</span>
                     </div>
                     <div>
                         <Icons.IconShare />

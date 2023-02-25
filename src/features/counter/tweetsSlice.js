@@ -9,6 +9,7 @@ export const tweetsSilce = createSlice({
             answers:10,
             body:"As millions of people welcome Ramadan, discover how different cultures around the world celebrate the month with #GoogleRamadanBingo",
             likes:478,
+            isLikeMe:false,
             time:'1h',
             name:"Google",
             retweets:66,tweet_name:"@Google",
@@ -29,6 +30,7 @@ export const tweetsSilce = createSlice({
             answers:10,
             body:"As millions of people welcome Ramadan, discover how different cultures around the world celebrate the month with #GoogleRamadanBingo",
             likes:478,
+            isLikeMe:false,
             time:'1h',
             name:"Google",
             retweets:66,tweet_name:"@Google",
@@ -40,6 +42,7 @@ export const tweetsSilce = createSlice({
             answers:8,
             body:"From learning Navigation with Compose and Lists to creating designs that were fully functional Compose, you earned it @blundell_apps! #AndroidDevChallenge",
             likes:137,
+            isLikeMe:false,
             time:'6h',
             name:"Android Developers",
             retweets:30,tweet_name:"@AndroidDev",
@@ -51,6 +54,7 @@ export const tweetsSilce = createSlice({
             answers:17,
             body:"With the new video editor, you can crop, change perspective and add filters. You can also control brightness, contrast, saturation and more so you can apply your own signature look to your videos.",
             likes:342,
+            isLikeMe:false,
             time:'11 feb',
             name:"Google Photos",
             retweets:63,tweet_name:"@googlephotos",
@@ -62,6 +66,7 @@ export const tweetsSilce = createSlice({
             answers:8,
             body:"Check out @Xbox’s Earth Day celebration activities and learn how you can get involved:",
             likes:622,
+            isLikeMe:false,
             time:'3h',
             name:"Xboxer",
             retweets:96,tweet_name:"@Xbox",
@@ -73,6 +78,7 @@ export const tweetsSilce = createSlice({
             answers:8,
             body:"Check out @Xbox’s Earth Day celebration activities and learn how you can get involved:",
             likes:622,
+            isLikeMe:false,
             time:'3h',
             name:"Xboxer",
             retweets:96,tweet_name:"@Xbox",
@@ -81,12 +87,16 @@ export const tweetsSilce = createSlice({
         }
     ],
     reducers: {
-        addTweet: (tweet) => { 
-            console.log(tweet)
+        addTweet: (state,action) => { 
+            state.unshift(action.payload)
+        },
+        updateTweet: (state,action) => {
+             const tweetFound = state.find( tweet => tweet.id === action.payload.id)
+             tweetFound && state.splice(state.indexOf(tweetFound),1,action.payload)
         }
     }
 })
 
-export const { addTweet } = tweetsSilce.actions
+export const { addTweet,updateTweet } = tweetsSilce.actions
 
 export default tweetsSilce.reducer
