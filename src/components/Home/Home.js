@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { IsMobile } from '../../helpers/IsMobile'
 import { Header } from '../Headers/Header'
 import { NewTweet } from '../New_Tweet/NewTweet'
 import { Tweet } from './Tweet'
-import { Tweets } from './Tweets'
 
 
 export const Home = () => {
 
     const [Mobile, setIsMobile] = useState(true)
 
-    const [ArrTweets, setArrTweets] = useState(Tweets)
+    const tweets = useSelector((state) => state.tweets)
 
     useEffect(() => {
         const isMobile = IsMobile();
@@ -32,14 +32,13 @@ export const Home = () => {
             <Header title={'Inicio'} destacados={true}/>
 
             {
-                (!Mobile) && <NewTweet setArrTweets={setArrTweets} />
+                (!Mobile) && <NewTweet setArrTweets={tweets} />
             }
 
             
             {
-                ArrTweets.map( T=> <Tweet key={T.id} info={T}/>)
+                tweets.map( T=> <Tweet key={T.id} info={T}/>)
             }
-
 
         </div>
     )

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import { useForm } from '../../hooks/useForm'
 import Icons from '../icons'
 
@@ -8,7 +7,7 @@ export const NewTweet = ({setArrTweets}) => {
 
     const [id, setId] = useState(12)
 
-    const [values, handleInputChange] = useForm({
+    const [values, handleInputChange, reset] = useForm({
         tweet:''
     })
 
@@ -22,12 +21,12 @@ export const NewTweet = ({setArrTweets}) => {
         time:'Ahora',
         nombre:"Usuario",
         retweets:0,tweet_nom:"@user",
-        url:"/assets/perfil/pexels-ekrulila-4040433.jpg",
-        imgs:[]
+        url:"/assets/perfil/pexels-ekrulila-4040433.jpg"
     }
 
     const Addtweet = () => {
         
+        reset();
 
         if(tweet.length > 0){
             setArrTweets(c => [New_Tweet,...c])
@@ -89,9 +88,6 @@ export const NewTweet = ({setArrTweets}) => {
 
                 </div>
             </div>
-
-            
-            
         </div>
     )
 }

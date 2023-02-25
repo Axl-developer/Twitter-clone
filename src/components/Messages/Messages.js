@@ -1,12 +1,20 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Header } from '../Headers/Header'
 import { NothingInfo } from '../NothingInfo/NothingInfo'
 
 export const Messages = () => {
+
+    const messages = useSelector((state) => state.messages)
+
     return (
         <div>
             <Header title={'Mensajes'} config={true}/>
-            <NothingInfo title={'Envía un mensaje, recibe un mensaje'} text={'Los Mensajes Directos son conversaciones privadas entre tú y otras personas en Twitter. Puedes compartir Tweets, contenido multimedia y mucho más.'}/>
+            {
+                (messages.length)
+                ?'messages'
+                :<NothingInfo title={'Envía un mensaje, recibe un mensaje'} text={'Los Mensajes Directos son conversaciones privadas entre tú y otras personas en Twitter. Puedes compartir Tweets, contenido multimedia y mucho más.'}/>
+            }
         </div>
     )
 }

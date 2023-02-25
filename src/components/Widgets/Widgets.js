@@ -1,9 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Icons from '../icons'
 import { SingleWidget } from './SingleWidget'
-import { TendenciasPeru,QuienSeguir } from './Tendencias'
 
 export const Widgets = () => {
+
+    const trends = useSelector((state) => state.trends)
+    const whoToFollow = useSelector((state) => state.whoToFollow)
 
     return (
         <div className="Widgets__content">
@@ -15,9 +18,9 @@ export const Widgets = () => {
             </form>
 
             <div style={{position:'relative'}}>
-                <SingleWidget title={'Tendencias'} items={TendenciasPeru}/>
+                <SingleWidget title={'Tendencias'} items={trends}/>
 
-                <SingleWidget title={'A quién seguir'} items={QuienSeguir}/>
+                <SingleWidget title={'A quién seguir'} items={whoToFollow}/>
             </div>
         </div>
     )

@@ -1,9 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Header } from '../Headers/Header'
-import { QueEstaPasando, TendenciasPeru } from '../Widgets/Tendencias'
 import { ListItem } from './ListItem'
 
 export const Explore = () => {
+
+    const trends = useSelector((state) => state.trends)
+
     return (
         <div>
             <Header search={true} config={true}/>
@@ -13,9 +16,10 @@ export const Explore = () => {
                     <h1>COVID-19 actualizaciones para EE.UU.</h1>
                 </div>
             </div>
-            <ListItem title={'Tendencias para ti'}  Trend={true} Items={TendenciasPeru}/>
+            <ListItem title={'Tendencias para ti'}  Trend={true} Items={trends}/>
 
-            <ListItem title={'¿Qué está pasando?'} Items={QueEstaPasando}/>
+
+
         </div>
     )
 }

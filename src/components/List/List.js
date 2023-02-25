@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Lists = ({title,listas,mensaje,setList,Component}) => {
+export const List = ({title,listas,mensaje,setList,Component}) => {
     return (
         <div className="Lists__content">
             <div> 

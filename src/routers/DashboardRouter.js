@@ -4,7 +4,7 @@ import { Bookmarks } from '../components/Bookmarks/Bookmarks';
 import { Explore } from '../components/Explore/Explore';
 import { Home } from '../components/Home/Home';
 import { TweetScreen } from '../components/Home/TweetScreen';
-import { ListsScreen } from '../components/Lists/ListsScreen';
+import { ListScreen } from '../components/List/ListsScreen';
 import { Messages } from '../components/Messages/Messages';
 import { NewTweetScreen } from '../components/New_Tweet/NewTweetScreen';
 import { Notifications } from '../components/Notifications/Notifications';
@@ -29,7 +29,7 @@ export const DashboardRouter = () => {
 
                             <Route exact path="/bookmarks" component={Bookmarks}/>
 
-                            <Route exact path="/lists" component={ListsScreen}/>
+                            <Route exact path="/list" component={ListScreen}/>
 
                             <Route exact path="/user" component={User}/>
 

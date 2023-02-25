@@ -1,13 +1,12 @@
 import React from 'react'
-import { IemNotification } from './IemNotification'
+import { IemNotification } from './ItemNotification'
 
-export const ListNotifications = () => {
+export const ListNotifications = ({items}) => {
 
-    const Notifications = [1,2,3,4,5]
     return (
         <div>
             {
-                Notifications.map( Notifications => <IemNotification key={Notifications} />)
+                items.map( notification => <IemNotification key={notification.id} {...notification} />)
             }
         </div>
     )

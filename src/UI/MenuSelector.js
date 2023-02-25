@@ -111,7 +111,7 @@ export const MenuDesktop = () => {
                                         <Icons.IconBookmarks />
                                     </Atoms.Navlink>
 
-                                    <Atoms.Navlink path="lists" text="Listas">
+                                    <Atoms.Navlink path="list" text="Listas">
                                         <Icons.IconList />
                                     </Atoms.Navlink>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 import { GetTweetById } from '../../helpers/getTweetByid'
 import { Header } from '../Headers/Header'
@@ -6,13 +7,14 @@ import Icons from '../icons'
 import { ImgContent } from './ImgsContents'
 import { Retweet } from './Retweet'
 import { Tweet } from './Tweet'
-import { Tweets } from './Tweets'
 
 export const TweetScreen = () => {
 
     const {tweetid} = useParams()
 
-    const info = GetTweetById(Tweets,Number(tweetid))
+    const tweets = useSelector((state) => state.tweets)
+    const comments = useSelector((state) => state.comments)
+    const info = GetTweetById(tweets,Number(tweetid))
     const {id,answers,body,retweet,likes,name,retweets,tweet_name,url,imgs} = info
 
     const [Like, setLike] = useState(false)
@@ -30,41 +32,6 @@ export const TweetScreen = () => {
             }
     }
 
-    const comments = [
-        {
-            id:1,
-            name:'Juanjo',
-            answers:10,
-            likes:478,
-            retweets:66,
-            tweet_name:'@juanOr',
-            time:'5h',
-            body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
-            url:"/assets/perfil/pexels-simon-robben-614810.jpg"
-        },
-        {
-            id:2,
-            name:'Victor',
-            answers:4,
-            likes:322,
-            retweets:50,
-            tweet_name:'@VicGo',
-            time:'7h',
-            body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
-            url:"/assets/perfil/pexels-stefan-stefancik-91227.jpg"
-        },
-        {
-            id:3,
-            name:'William',
-            answers:11,
-            likes:257,
-            retweets:47,
-            tweet_name:'@william',
-            time:'8h',
-            body:'Deserunt irure Lorem occaecat aliqua laboris et pariatur.',
-            url:"/assets/perfil/pexels-stefan-stefancik-91224.jpg"
-        },
-    ]
     
     return (
         <div>
