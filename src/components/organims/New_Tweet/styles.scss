@@ -1,0 +1,97 @@
+.newTweet{
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+
+        &.is-home{
+            border-bottom: 11px solid var(--color-border2);
+            padding:  10px 0 45px;
+        }
+    }
+
+    &__Tweet{
+        display: flex;
+        padding: 0 16px; 
+
+        &_text{
+            width: 100%;
+            padding: 0 12px;
+        }
+       
+    }
+
+    &__img_content{
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        border-radius: 50%;
+        display:flex;
+        align-items:center;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &__config{
+        align-items: center;        
+        display: flex;
+        padding: 8px 0 12px;
+        border-bottom: 1px solid var(--color-border);
+
+        span{
+            color: var(--color-primary);
+            font-size: 14px;
+        }
+    }
+    &__btns_content{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+
+        .loadLength{
+            border-radius: 50%;
+            border: 1px solid var(--color-primary);
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+        }
+    }
+
+    &__icons_content{
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon_content{
+        height: 17px;
+        width: 17px;
+        margin-right: 16px;
+        svg{
+            fill:var(--color-primary)
+        }
+
+        #circle circle{
+            fill: none;
+            stroke-width: var(--color-red);
+            stroke-width: 3px;
+        }
+
+        &.is-single{
+            margin-right: 4px;
+        }
+    }
+
+    &__contentBtn{
+        display: none;
+    }
+    
+}
+
+@media (min-width:688px){
+    .newTweet__contentBtn{
+        display: block !important;
+    }
+}

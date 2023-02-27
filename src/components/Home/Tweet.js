@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { updateTweet } from '../../features/counter/tweetsSlice'
+import { updateTweet } from '../../features/tweet/tweetsSlice'
 
 import Icons from '../icons'
 import { ImgContent } from './ImgsContents'
-import { Retweet } from './Retweet'
+import { Retweet } from '../molecules'
+
+import { getResponse } from '../../features/response/responseSlice'
+import { toogleModal } from '../../features/modal/modalSlice'
 
 export const Tweet = ({info}) => {
     
@@ -27,6 +30,14 @@ export const Tweet = ({info}) => {
         }
 
         dispatch(updateTweet({...info,isLikeMe:upLike,likes:isUp}))
+    }
+
+    const activeNewTweet = (type) => {
+        dispatch(toogleModal(true))
+        dispatch(getResponse({
+            tweet:info,
+            type:type
+        }))
     }
 
     return (
@@ -59,12 +70,12 @@ export const Tweet = ({info}) => {
                 }
 
                 <div className="content_actions">
-                    <div>
+                    <div onClick={()=>activeNewTweet('response')}>
                         <Icons.IconAswer />
                         <span className="lighter">{answers}</span>
                     </div>
                     
-                    <div>
+                    <div onClick={()=>activeNewTweet('retweet')}>
                         <Icons.IconRetweet />
                         <span className="lighter">{retweets}</span>
                     </div>

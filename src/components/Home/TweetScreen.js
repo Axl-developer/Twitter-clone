@@ -5,7 +5,7 @@ import { GetTweetById } from '../../helpers/getTweetByid'
 import { Header } from '../Headers/Header'
 import Icons from '../icons'
 import { ImgContent } from './ImgsContents'
-import { Retweet } from './Retweet'
+import { Retweet } from '../molecules'
 import { Tweet } from './Tweet'
 
 export const TweetScreen = () => {

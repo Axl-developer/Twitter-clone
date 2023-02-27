@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+
 import { IsMobile } from '../../helpers/IsMobile'
+
 import { Header } from '../Headers/Header'
-import { NewTweet } from '../New_Tweet/NewTweet'
+import {NewTweet} from '../organims'
 import { Tweet } from './Tweet'
 
 
@@ -30,16 +32,13 @@ export const Home = () => {
     return (
         <div>
             <Header title={'Inicio'} destacados={true}/>
-
             {
-                (!Mobile) && <NewTweet />
+                (!Mobile) && <NewTweet variant='is-home' />
             }
 
-            
             {
                 tweets.map( T=> <Tweet key={T.id} info={T}/>)
             }
-
         </div>
     )
 }

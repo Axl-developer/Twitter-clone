@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import bookmarksSlice  from '../features/counter/bookmarks';
-import commentsScile from '../features/counter/commentsSlice';
-import listsSlice from '../features/counter/listsSlice';
-import messagesSlice from '../features/counter/messagesSlice';
-import notificationsSlice from '../features/counter/notificationsSlice';
-import trendsSlice from '../features/counter/trendsSlice';
-import  tweetsSilce  from '../features/counter/tweetsSlice';
-import whoToFollowSlice from '../features/counter/whoToFollowSlice';
+import  tweetsSilce  from '../features/tweet/tweetsSlice';
+import bookmarksSlice  from '../features/bookmarks/bookmarks';
+import commentsScile from '../features/comments/commentsSlice';
+import listSlice from '../features/list/listSlice';
+import messagesSlice from '../features/messages/messagesSlice';
+import notificationsSlice from '../features/notifications/notificationsSlice';
+import trendsSlice from '../features/trends/trendsSlice';
+import whoToFollowSlice from '../features/whoToFollow/whoToFollowSlice';
+import responseSlice from '../features/response/responseSlice';
+import modalSlice from '../features/modal/modalSlice';
 
 export const store = configureStore({
   reducer: {
@@ -17,6 +19,8 @@ export const store = configureStore({
     notifications: notificationsSlice,
     messages: messagesSlice,
     bookmarks: bookmarksSlice,
-    list: listsSlice
+    list: listSlice,
+    response: responseSlice,
+    modal: modalSlice
   },
 })

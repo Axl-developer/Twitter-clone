@@ -1,9 +1,10 @@
 import React from 'react'
-import { ImgContent } from './ImgsContents'
+import { ImgContent } from '../../Home/ImgsContents'
 
-//{process.env.PUBLIC_URL + url}
+import './styles.scss';
 
-export const Retweet = ({url,name,tweet_name,time,body,imgs}) => {
+
+const Retweet = ({url,name,body,imgs}) => {
   return (
     <div className='retweet'>
         <div className="retweet__head">
@@ -22,3 +23,5 @@ export const Retweet = ({url,name,tweet_name,time,body,imgs}) => {
     </div>
   )
 }
+
+export default Retweet

@@ -22,6 +22,8 @@ import IconBars from './IconBars'
 import IconEmoji from './IconEmoji'
 import IconCalendar from './IconCalendar'
 import IconCircle from './IconCircle'
+import iconClose from './iconClose'
+import IconWorld from './IconWorld'
 
 export default {
     IconHome,
@@ -47,5 +49,7 @@ export default {
     IconBars,
     IconEmoji,
     IconCalendar,
-    IconCircle
+    IconCircle,
+    iconClose,
+    IconWorld
 }
