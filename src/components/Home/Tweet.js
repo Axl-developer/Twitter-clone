@@ -6,6 +6,7 @@ import { updateTweet } from '../../features/tweet/tweetsSlice'
 import Icons from '../icons'
 import { ImgContent } from './ImgsContents'
 import { Retweet } from '../molecules'
+import {Dropdown} from '../organims'
 
 import { getResponse } from '../../features/response/responseSlice'
 import { toogleModal } from '../../features/modal/modalSlice'
@@ -73,6 +74,9 @@ export const Tweet = ({info}) => {
                     <div onClick={()=>activeNewTweet('response')}>
                         <Icons.IconAswer />
                         <span className="lighter">{answers}</span>
+                        <Dropdown>
+                            Holaaaaaaaa
+                        </Dropdown>
                     </div>
                     
                     <div onClick={()=>activeNewTweet('retweet')}>

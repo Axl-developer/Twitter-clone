@@ -18,6 +18,12 @@ $colors:(
     border2:#F9F7FA,
     border-dark2:#15181C,
 
+    shadow:#65778633,
+    shadow-dark:#ffffff33,
+    
+    shadow2:#65778626,
+    shadow-dark2:#ffffff26,
+
     textTweet:#000,
     textTweet-dark:#D9D9D9,
 
@@ -43,6 +49,8 @@ $colors-dark:(
     theme:map-get($colors, theme-black),
     border:map-get($colors, border-dark),
     border2:map-get($colors, border-dark2),
+    shadow:map-get($colors, shadow-dark),
+    shadow2:map-get($colors, shadow-dark2),
     textTweet:map-get($colors, textTweet-dark),
     textPrimary:map-get($colors, textPrimary-dark),
     textSecondary:map-get($colors, textSecondary-dark),
