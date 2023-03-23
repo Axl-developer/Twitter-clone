@@ -1,13 +1,11 @@
 import React from 'react'
 import './styles.scss'
 
-const DropdownItem = ({onclick,Icon,text}) => {
+export const DropdownItem = ({children,text,onclick}) => {
   return (
-    <div className='DropdownItem' onclick={onclick}>
-        <Icon />
-        <span>{text}</span>
+    <div className='dropdownItem' onClick={onclick}>
+        {children}
+        <span className='dropdownItem-span'>{text}</span>
     </div>
   )
 }
-
-export default DropdownItem

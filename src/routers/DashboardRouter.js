@@ -1,13 +1,13 @@
 import React from 'react'
 import {Switch,Route, Redirect} from "react-router-dom";
-import { Bookmarks } from '../components/Bookmarks/Bookmarks';
-import { Explore } from '../components/Explore/Explore';
-import { Home } from '../components/Home/Home';
-import { TweetScreen } from '../components/Home/TweetScreen';
-import { ListScreen } from '../components/List/ListsScreen';
-import { Messages } from '../components/Messages/Messages';
-import { Notifications } from '../components/Notifications/Notifications';
-import { User } from '../components/User/User';
+import { Bookmarks } from '../pages/bookmarks';
+import { Explore } from '../pages/explore';
+import { Home } from '../pages/home';
+import { Lists } from '../pages/lists';
+import { Messages } from '../pages/messages';
+import { Notifications } from '../pages/notifications';
+import { TweetScreen } from '../pages/tweet';
+import { User } from '../pages/user';
 
 export const DashboardRouter = () => {
     return (
@@ -27,7 +27,7 @@ export const DashboardRouter = () => {
 
                             <Route exact path="/bookmarks" component={Bookmarks}/>
 
-                            <Route exact path="/list" component={ListScreen}/>
+                            <Route exact path="/list" component={Lists}/>
 
                             <Route exact path="/user" component={User}/>
 

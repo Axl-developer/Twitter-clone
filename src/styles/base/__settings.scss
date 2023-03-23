@@ -36,11 +36,23 @@ $colors:(
     widgetBackground:#f7f9fa,
     widgetBackground-dark:#15181C,
 
+    hoverBackground:#00000008,
+    hoverBackground-dark:#ffffff08,
+
+    blue-hover:#1d9bf01a,
+    blue:#1d9bf0,
+
+    green-hover:#00ba7c1a,
+    green:#00ba7c,
+
+    coral-hover:#f918801a,
+    coral:#f91880,
+
     //colors
     white:#fff,
     grey:#5B7083,
     greySecond:#6e767d,
-    red:#E0245E
+    red:#E0245E,
     
 );
 
@@ -56,6 +68,7 @@ $colors-dark:(
     textSecondary:map-get($colors, textSecondary-dark),
     themeInvert:map-get($colors, themeInvert-dark),
     widgetBackground:map-get($colors, widgetBackground-dark),
+    hoverBackground:map-get($colors, hoverBackground-dark),
 );
 
 :root{

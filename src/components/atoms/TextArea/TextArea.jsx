@@ -7,7 +7,7 @@ const resize = ({target}) => {
     target.style.height = `${scrollHeight}px`
 }
 
-const TextArea = ({onChange,value}) => {
+export const TextArea = ({onChange,value}) => {
   return (
     <textarea
         type="text"
@@ -21,5 +21,3 @@ const TextArea = ({onChange,value}) => {
     />
   )
 }
-
-export default TextArea

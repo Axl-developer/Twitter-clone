@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { TextArea } from '../../atoms'
@@ -6,11 +6,11 @@ import { Retweet } from '../../molecules'
 import Icons from '../../icons'
 
 import { useForm } from '../../../hooks/useForm'
-import { addTweet } from '../../../features/tweet/tweetsSlice'
-import { toogleModal } from '../../../features/modal/modalSlice'
+import { toogleModal } from '../../../redux/slices/modalSlice'
+import { cleanResponse } from '../../../redux/slices/responseSlice'
+import { addTweet } from '../../../redux/slices/tweetsSlice'
 
 import './styles.scss';
-import { cleanResponse } from '../../../features/response/responseSlice'
 
 const retweet ={
     id:0,
@@ -22,7 +22,7 @@ const retweet ={
     imgs:[{id:2,url:'/assets/imgs/pexels-mihis-alex-21022.jpg'},{id:3,url:'/assets/imgs/pexels-thorn-yang-441794.jpg'}]
 }
 
-const NewTweet = ({isModalTweet = false, variant='',}) => {
+export const NewTweet = ({isModalTweet = false, variant='',}) => {
 
    console.log('creo que esto es un template xd')
     const dispatch = useDispatch()
@@ -126,5 +126,3 @@ const NewTweet = ({isModalTweet = false, variant='',}) => {
         </div>
     )
 }
-
-export default NewTweet;

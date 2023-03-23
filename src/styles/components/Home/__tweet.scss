@@ -1,7 +1,14 @@
 .tweet__card{
     border-bottom:1px solid getColor(border);
-    padding: 12px 16px;
     display: flex;
+    padding: 12px 16px;
+    transition-duration: 0.2s;
+
+    &:hover{
+        background: var(--color-hoverBackground);
+        cursor: pointer;
+    }
+
     .right{
         margin-right: 12px;
 
@@ -24,45 +31,90 @@
     .left{
         width: 80%;
         
-        .content_actions{
-            margin-top: 11px;
-            display: flex;
-            justify-content: space-between;
+        .content{
 
-            .is-active{
-                svg{
-                    fill:var(--color-red);
+            &_actions{
+                margin-top: 11px;
+                display: flex;
+                justify-content: space-between;
+    
+                .is-active{
+                    svg{
+                        fill:var(--color-red);
+                    }
+                    span{
+                        color: var(--color-red);
+                    }
                 }
-                span{
-                    color: var(--color-red);
+                & > div{
+                    position: relative;
                 }
             }
-            div{
+
+            &_action{
                 min-height: 33px;
                 min-width: 33px;
                 display: flex;
                 align-items: center;
-                position: relative;
                 cursor: pointer;
-
+    
                 svg{
                     width: 1.25em;
                     fill:var(--color-grey);
                 }
-
+    
                 span{
                     margin-left: 10px;
                 }
+    
+                .hover-icon{
+                    align-items: center;
+                    border-radius: 50px;
+                    display: flex;
+                    padding: 8px;
+                    transition-duration: 0.2s;
+                }
+
+                @mixin coments($hover,$color) {
+                    &:hover{
+
+                        .hover-icon{
+                            background: $hover;
+                        }
+
+                        svg{
+                            fill: $color;
+                        }
+
+                        span{
+                            color:$color;
+                        }   
+                    }
+                }
+    
+                &.is-blue{
+                    @include coments(var(--color-blue-hover),var(--color-blue))
+                }
+                &.is-green{
+                    @include coments(var(--color-green-hover),var(--color-green))
+                }
+                &.is-coral{
+                    @include coments(var(--color-coral-hover),var(--color-coral))
+                }
+            }
+
+            
+
+            &_Tweet{
+                color: getColor(textTweet);
+                font-size: 15px;
+                overflow-wrap: break-word;
+                margin-bottom: 12px;
             }
         }
 
     }
-    .content_Tweet{
-        color: getColor(textTweet);
-        font-size: 15px;
-        overflow-wrap: break-word;
-        margin-bottom: 12px;
-    }
+    
 }
 
 @media(min-width:720px){

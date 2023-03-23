@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { Children, cloneElement } from 'react'
 import './styles.scss'
 
-const Dropdown = ({chidren}) => {
+export const Dropdown = ({close,children}) => {
   return (
-    <div className='dropdown'>{chidren}</div>
+    <>
+      <div className='dropdown-close' onClick={close}></div>
+      <div className='dropdown'>{
+        Children.map(children, child =>
+          cloneElement(child)
+        )}
+      </div>
+    </>
   )
 }
-
-export default Dropdown

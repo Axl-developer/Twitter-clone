@@ -3,7 +3,7 @@ import Icons from '../../icons';
 import './styles.scss';
 
 
-const Modal = ({children,close}) => {
+export const Modal = ({children,close}) => {
 
   return (
     <div className='modal'>
@@ -20,5 +20,3 @@ const Modal = ({children,close}) => {
     </div>
   )
 }
-
-export default Modal
