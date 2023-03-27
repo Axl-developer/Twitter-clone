@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
 
 import { IsMobile } from '../../helpers/IsMobile'
 
 import { Header } from '../../components/Headers/Header'
 import {NewTweet} from '../../components/organims'
-import { Tweet } from '../../components/organims/Tweet/Tweet'
+import { ContentTweet } from '../../components/organims/ContentTweet/ContentTweet'
 
 
 export const Home = () => {
 
     const [Mobile, setIsMobile] = useState(true)
-
-    const tweets = useSelector((state) => state.tweets)
 
     useEffect(() => {
         const isMobile = IsMobile();
@@ -36,9 +33,7 @@ export const Home = () => {
                 (!Mobile) && <NewTweet variant='is-home' />
             }
 
-            {
-                tweets.map( T=> <Tweet key={T.id} info={T}/>)
-            }
+            <ContentTweet />
         </div>
     )
 }

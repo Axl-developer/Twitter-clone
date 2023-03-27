@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { TextArea } from '../../atoms'
-import { Retweet } from '../../molecules'
+import { Retweet,BodyTweet } from '../../molecules'
 import Icons from '../../icons'
 
 import { useForm } from '../../../hooks/useForm'
@@ -67,6 +67,12 @@ export const NewTweet = ({isModalTweet = false, variant='',}) => {
 
     return (
         <div className={`newTweet__content ${variant}`} id="NewTweet">
+            {
+                (newTweet.response && isModalTweet) && 
+                <>
+                    <BodyTweet info={{...newTweet.response,isModalResponse:true,actions:false}} />
+                </>
+            }
             <div className="newTweet__Tweet">
                 <div>
                     <div className="newTweet__img_content">

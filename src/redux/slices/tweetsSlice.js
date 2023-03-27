@@ -11,16 +11,16 @@ export const tweetsSlice = createSlice({
             likes:478,
             isLikeMe:false,
             time:'1h',
-            name:"Google",
-            retweets:66,tweet_name:"@Google",
+            nombre:"Google",
+            retweets:66,tweet_nom:"@Google",
             url:"/assets/perfil/mvBRhlDs.jpg",
             imgs:[{id:1,url:'/assets/imgs/pexels-huy-phan-1474237.jpg'}],
             retweet:{
                 id:0,
                 body:"From learning Navigation with Compose and Lists to creating designs that were fully functional Compose, you earned it @blundell_apps! #AndroidDevChallenge",
                 time:'6h',
-                name:"Android Developers",
-                tweet_name:"@AndroidDev",
+                nombre:"Android Developers",
+                tweet_nom:"@AndroidDev",
                 url:"/assets/perfil/VRtfrDXq_x96.png",
                 imgs:[{id:2,url:'/assets/imgs/pexels-mihis-alex-21022.jpg'},{id:3,url:'/assets/imgs/pexels-thorn-yang-441794.jpg'}]
             }
@@ -32,8 +32,8 @@ export const tweetsSlice = createSlice({
             likes:478,
             isLikeMe:false,
             time:'1h',
-            name:"Google",
-            retweets:66,tweet_name:"@Google",
+            nombre:"Google",
+            retweets:66,tweet_nom:"@Google",
             url:"/assets/perfil/mvBRhlDs.jpg",
             imgs:[{id:1,url:'/assets/imgs/pexels-huy-phan-1474237.jpg'}]
         },
@@ -44,8 +44,8 @@ export const tweetsSlice = createSlice({
             likes:137,
             isLikeMe:false,
             time:'6h',
-            name:"Android Developers",
-            retweets:30,tweet_name:"@AndroidDev",
+            nombre:"Android Developers",
+            retweets:30,tweet_nom:"@AndroidDev",
             url:"/assets/perfil/VRtfrDXq_x96.png",
             imgs:[{id:2,url:'/assets/imgs/pexels-mihis-alex-21022.jpg'},{id:3,url:'/assets/imgs/pexels-thorn-yang-441794.jpg'}]
         },
@@ -56,8 +56,8 @@ export const tweetsSlice = createSlice({
             likes:342,
             isLikeMe:false,
             time:'11 feb',
-            name:"Google Photos",
-            retweets:63,tweet_name:"@googlephotos",
+            nombre:"Google Photos",
+            retweets:63,tweet_nom:"@googlephotos",
             url:"/assets/perfil/H99BdKOh_normal.jpg",
             imgs:[{id:4,url:'/assets/imgs/pexels-pixabay-265946.jpg'}]
         },
@@ -68,8 +68,8 @@ export const tweetsSlice = createSlice({
             likes:622,
             isLikeMe:false,
             time:'3h',
-            name:"Xboxer",
-            retweets:96,tweet_name:"@Xbox",
+            nombre:"Xboxer",
+            retweets:96,tweet_nom:"@Xbox",
             url:"/assets/perfil/_qzIlQPl_normal.jpg",
             imgs:[{id:5,url:'/assets/imgs/pexels-fox-1445238.jpg'},{id:6,url:'/assets/imgs/pexels-fox-2106216.jpg'},{id:7,url:'/assets/imgs/pexels-thiago-japyassu-4068701.jpg'}]
         },
@@ -80,8 +80,8 @@ export const tweetsSlice = createSlice({
             likes:622,
             isLikeMe:false,
             time:'3h',
-            name:"Xboxer",
-            retweets:96,tweet_name:"@Xbox",
+            nombre:"Xboxer",
+            retweets:96,tweet_nom:"@Xbox",
             url:"/assets/perfil/_qzIlQPl_normal.jpg",
             imgs:[{id:5,url:'/assets/imgs/pexels-fox-1445238.jpg'},{id:6,url:'/assets/imgs/pexels-fox-2106216.jpg'},{id:7,url:'/assets/imgs/pexels-thiago-japyassu-4068701.jpg'},{id:8,url:'/assets/imgs/pexels-fox-1445238.jpg'},{id:9,url:'/assets/imgs/pexels-fox-2106216.jpg'}]
         }

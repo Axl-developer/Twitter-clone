@@ -4,5 +4,6 @@ export * from './List/List';
 export * from './My-list/MyList';
 export * from './New_Tweet/NewTweet';
 export * from './Perfil/Perfil';
+export * from './ResponseTweet/ResponseTweet';
 export * from './Tabs/Tabs';
 export * from './Tweet/Tweet';

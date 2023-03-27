@@ -1,0 +1,86 @@
+.bodyTweet{
+    display: flex;
+    padding: 12px 16px 0px;
+
+    &:hover{
+        background: var(--color-hoverBackground);
+        cursor: pointer;
+    }
+
+    &.is-response{
+        .right{
+            &::after{
+                background: var(--color-border);
+                content: '';
+                height: calc(100% - 44px);
+                left: 23px;
+                position: absolute;
+                top: 52px;
+                width: 2px;
+                z-index: 100;
+            }
+        }
+        
+        .left{
+            padding-bottom: 12px;
+        }
+    }
+
+    &__head{
+        padding: 12px 12px 0px 12px;
+    }
+
+    &__person{
+        display: flex;
+        margin-bottom: 4px;
+    }
+
+    .right{
+        margin-right: 12px;
+        position: relative;
+
+        .content-img{
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 48px;
+
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
+    .left{
+        width: 80%;
+    }
+
+    .content-img{//convertir a tomico
+        border-radius: 50%;
+        display: block;
+        overflow: hidden;
+        height: 19px;
+        width: 19px;
+    }
+
+    .content_Tweet{//hacer atomico para no repetir en tweet card
+        color: var(--color-textTweet);
+        font-size: 15px;
+        overflow-wrap: break-word;
+        margin-bottom: 12px;
+    }
+}
+
+@media(min-width:720px){
+    .left{
+        width: 90% !important;
+    }
+    .TwoImgs{
+
+        height: 283px !important;
+    }
+}

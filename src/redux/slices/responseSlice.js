@@ -14,7 +14,7 @@ export const responseSlice = createSlice({
         },
         cleanResponse: (state) => {
             state.tweet = initialState.tweet
-            state.tweet = initialState.type
+            state.type = initialState.type
         },
     }
 })

@@ -1,0 +1,70 @@
+.actions{
+    margin-left: auto;
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+
+    .is-active{
+        svg{
+            fill:var(--color-red);
+        }
+        span{
+            color: var(--color-red);
+        }
+    }
+    & > div{
+        position: relative;
+    }
+}
+
+.action{
+    min-height: 33px;
+    min-width: 33px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg{
+        width: 1.25em;
+        fill:var(--color-grey);
+    }
+
+    span{
+        margin-left: 10px;
+    }
+
+    .hover-icon{
+        align-items: center;
+        border-radius: 50px;
+        display: flex;
+        padding: 8px;
+        transition-duration: 0.2s;
+    }
+
+    @mixin coments($hover,$color) {
+        &:hover{
+
+            .hover-icon{
+                background: $hover;
+            }
+
+            svg{
+                fill: $color;
+            }
+
+            span{
+                color:$color;
+            }   
+        }
+    }
+
+    &.is-blue{
+        @include coments(var(--color-blue-hover),var(--color-blue))
+    }
+    &.is-green{
+        @include coments(var(--color-green-hover),var(--color-green))
+    }
+    &.is-coral{
+        @include coments(var(--color-coral-hover),var(--color-coral))
+    }
+}
