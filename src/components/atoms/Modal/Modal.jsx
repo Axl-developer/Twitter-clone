@@ -12,11 +12,13 @@ export const Modal = ({children,close}) => {
                 <div className="modal-content-svg" onClick={close}>
                   <Icons.iconClose />
                 </div>
+                <Icons.iconClose />
             </div>
             <div className="modal-body">
               {children}
             </div>
         </div>
+        <div className="modal-background" onClick={close}></div>
     </div>
   )
 }

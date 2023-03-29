@@ -1,5 +1,6 @@
 import React from 'react'
-import { WidgetList } from './WidgetList'
+import { WidgetList } from '../organims'
+
 
 export const SingleWidget = ({title,items}) => {
     return (

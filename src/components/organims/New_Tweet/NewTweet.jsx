@@ -54,8 +54,6 @@ export const NewTweet = ({isModalTweet = false, variant='',}) => {
         ...( dataTweet.type === 'response' && {response:dataTweet.tweet})
     }
 
-    console.log(newTweet)
-
     const Addtweet = () => {
         (tweet) &&
             dispatch(addTweet(newTweet))
@@ -64,13 +62,12 @@ export const NewTweet = ({isModalTweet = false, variant='',}) => {
             reset();
     }
 
-
     return (
         <div className={`newTweet__content ${variant}`} id="NewTweet">
             {
                 (newTweet.response && isModalTweet) && 
                 <>
-                    <BodyTweet info={{...newTweet.response,isModalResponse:true,actions:false}} />
+                    <BodyTweet info={{...newTweet.response}} isModalResponse={true} variant="is-inModal" />
                 </>
             }
             <div className="newTweet__Tweet">
@@ -108,7 +105,7 @@ export const NewTweet = ({isModalTweet = false, variant='',}) => {
                                 <Icons.IconBars />
                             </div>
                             <div className="newTweet__icon_content">
-                                <Icons.IconEmoji />
+                                <Icons.IconEmojiHappy />
                             </div>
                             <div className="newTweet__icon_content">
                                 <Icons.IconCalendar />

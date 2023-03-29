@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Icons from '../icons'
+import { Form } from '../molecules'
 import { SingleWidget } from './SingleWidget'
 
 export const Widgets = () => {
@@ -10,12 +11,7 @@ export const Widgets = () => {
 
     return (
         <div className="Widgets__content">
-            <form>
-                <div>
-                    <Icons.IconSchear />
-                </div>
-                <input type="text" placeholder="Buscar en Twitter" />
-            </form>
+            <Form />
 
             <div style={{position:'relative'}}>
                 <SingleWidget title={'Tendencias'} items={trends}/>

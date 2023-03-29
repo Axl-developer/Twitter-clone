@@ -3,4 +3,8 @@
     &.blue{
         color:var(--color-primary)
     }
+
+    &.xs{
+        font-size: 15px;
+    }
 }

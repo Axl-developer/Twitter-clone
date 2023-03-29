@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { IsMobile } from '../../helpers/IsMobile'
 import Icons from '../icons'
+import { Form } from '../molecules'
 import {Sidebar} from './Sidebar'
 
 export const Header = ({img= true,search = false, title = false, config=false, destacados=false}) => {
@@ -21,13 +22,7 @@ export const Header = ({img= true,search = false, title = false, config=false, d
             }
             
             {
-                (search)
-                    &&<form>
-                        <div>
-                            <Icons.IconSchear />
-                        </div>
-                        <input type="text" placeholder="Buscar en Twitter" />
-                    </form>
+                search && <Form />
             }
 
             {

@@ -3,7 +3,7 @@ import { ImgContent } from '../Imgs-content/ImgsContents';
 
 import './styles.scss';
 
-export const Retweet = ({url,name,body,imgs,isResponse = false}) => {
+export const Retweet = ({url,name,body,imgs,isModalResponse = false}) => {
   return (
     <div className='retweet'>
         <div className="retweet__head">
@@ -18,7 +18,7 @@ export const Retweet = ({url,name,body,imgs,isResponse = false}) => {
                 {body}
             </div>
         </div>
-            {(imgs && !isResponse) && <ImgContent imgs={imgs}/>}
+            {(imgs && !isModalResponse) && <ImgContent imgs={imgs}/>}
     </div>
   )
 }

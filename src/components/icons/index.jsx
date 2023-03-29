@@ -9,6 +9,7 @@ import IconCircleOptions from "./IconCircleOptions"
 import IconNewTweet from "./IconNewTweet"
 import IconTweet from "./IconTweet"
 import IconAswer from "./IconAswer"
+import IconAswerDislike from './IconAswerDislike'
 import IconRetweet from './IconRetweet'
 import IconLike from './IconLike'
 import IconLikeFull from './IconLikeFull'
@@ -19,11 +20,18 @@ import IconDiamon from './IconDiamon'
 import IconImage from './IconImage'
 import IconGif from './IconGif'
 import IconBars from './IconBars'
-import IconEmoji from './IconEmoji'
+import IconEmojiHappy from './IconEmojiHappy'
 import IconCalendar from './IconCalendar'
 import IconCircle from './IconCircle'
 import iconClose from './iconClose'
 import IconWorld from './IconWorld'
+import IconEmojiSad from './IconEmojiSad'
+import IconPersonAdd from './IconPersonAdd'
+import IconListAdd from './IconListAdd'
+import IconMute from './IconMute'
+import IconBlook from './IconBlook'
+import IconCode from './IconCode'
+import IconFlag from './IconFlag'
 
 export default {
     IconHome,
@@ -47,9 +55,17 @@ export default {
     IconImage,
     IconGif,
     IconBars,
-    IconEmoji,
+    IconEmojiHappy,
     IconCalendar,
     IconCircle,
     iconClose,
-    IconWorld
+    IconWorld,
+    IconAswerDislike,
+    IconEmojiSad,
+    IconPersonAdd,
+    IconListAdd,
+    IconMute,
+    IconBlook,
+    IconCode,
+    IconFlag,
 }

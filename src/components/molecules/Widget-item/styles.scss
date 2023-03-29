@@ -1,0 +1,23 @@
+.widgets-item{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+
+    &:hover{
+        background: var(--color-hoverBackground);
+        cursor: pointer;
+    }
+    
+    & > div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    svg{
+        width: 17px;
+        height: 17px;
+        fill:var(--color-textSecondary)
+    }
+}

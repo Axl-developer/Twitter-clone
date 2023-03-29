@@ -1,3 +1,14 @@
+@mixin line($rest) {
+    background: var(--color-border);
+    content: '';
+    height: $rest;
+    left: 23px;
+    position: absolute;
+    top: 52px;
+    width: 2px;
+    z-index: 100;
+}
+
 .bodyTweet{
     display: flex;
     padding: 12px 16px 0px;
@@ -10,19 +21,25 @@
     &.is-response{
         .right{
             &::after{
-                background: var(--color-border);
-                content: '';
-                height: calc(100% - 44px);
-                left: 23px;
-                position: absolute;
-                top: 52px;
-                width: 2px;
-                z-index: 100;
+                @include line(calc(100% - 44px));
             }
         }
         
         .left{
             padding-bottom: 12px;
+        }
+    }
+
+    &.is-inModal{
+
+        &:hover{
+            background: none;
+        }
+
+        .right{
+            &::after{
+                @include line(calc(100% - 56px));
+            }
         }
     }
 
@@ -57,6 +74,15 @@
 
     .left{
         width: 80%;
+
+        &-head{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-content{
+            position: relative;
+        }
     }
 
     .content-img{//convertir a tomico

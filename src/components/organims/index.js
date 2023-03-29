@@ -1,3 +1,4 @@
+export * from './ContentTweet/ContentTweet';
 export * from './Dropdown/Dropdown';
 export * from './Fix-list/FixList';
 export * from './List/List';
@@ -7,3 +8,4 @@ export * from './Perfil/Perfil';
 export * from './ResponseTweet/ResponseTweet';
 export * from './Tabs/Tabs';
 export * from './Tweet/Tweet';
+export * from './WidgetList/WidgetList';

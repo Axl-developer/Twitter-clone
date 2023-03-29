@@ -1,37 +1,5 @@
 .Widgets__content{
-    flex: 2;
-    
-    form{
-        background-color: getColor(border);
-        border-radius: 9999px;
-        overflow: hidden;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        padding: 0px 10px;
-        max-width: 330px;
-        margin: 20px auto;
-        div{
-            width: 17px;
-            height: 17px;
-            display: flex;
-            align-items: center;
-            svg{
-                fill:getColor(textSecondary)
-            }
-        }
-
-        input{
-            width: 100%;
-            padding: 5px;
-            background:none;
-            border: none;
-            color: getColor(textPrimary);
-            &:focus{
-                outline: none;
-            }
-        }
-    }
+    width: 350px;
 }
 
 
@@ -39,8 +7,6 @@
 .Widgets__SingleContent{
     background-color: getColor(widgetBackground);
     border-radius: 16px;
-    overflow: hidden;
-    max-width: 350px;
     margin: 20px auto;
 
     h1{
@@ -50,40 +16,4 @@
         padding: 12px 16px;
     }
 
-    .Widgets__more{
-        font-size: 15px;
-        color:var(--color-primary);
-        background: none;
-        border: none;
-        text-align: left;
-    }
-}
-
-
-.Widgets__WidgetList{
-
-}
-
-.Widgets__WidgetList_Item{
-    border-top: 1px solid getColor(border);
-    display: flex;
-    flex-direction: column;
-    padding: 12px 16px;
-
-    &:hover{
-        background: rgba($color: var(--color-white), $alpha: 0.03);
-        cursor: pointer;
-    }
-    
-    div{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    svg{
-        width: 17px;
-        height: 17px;
-        fill:getColor(textSecondary)
-    }
 }
