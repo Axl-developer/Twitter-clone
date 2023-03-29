@@ -60,7 +60,7 @@
 @media(min-width:615px){
     .modal{
         &-background{
-            background-color: rgba(91, 112, 131, 0.4);
+            background-color: var(--color-transparentBackground);
         }
     
         &-card{

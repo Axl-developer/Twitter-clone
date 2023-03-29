@@ -32,6 +32,7 @@ import IconMute from './IconMute'
 import IconBlook from './IconBlook'
 import IconCode from './IconCode'
 import IconFlag from './IconFlag'
+import IconPencil from './IconPencil'
 
 export default {
     IconHome,
@@ -68,4 +69,5 @@ export default {
     IconBlook,
     IconCode,
     IconFlag,
+    IconPencil,
 }

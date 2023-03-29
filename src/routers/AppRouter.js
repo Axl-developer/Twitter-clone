@@ -17,7 +17,7 @@ export const AppRouter = () => {
 
     const [IsMobile, setIsMobile] = useState(true)
     useEffect(() => {
-        if(window.screen.width >= 1005){
+        if(window.innerWidth >= 1005){
             setIsMobile(false)
         }else{
             setIsMobile(true)
@@ -26,8 +26,8 @@ export const AppRouter = () => {
 
 
     window.addEventListener("resize", function(){
-        
-        if(window.screen.width >= 1005){
+        console.log(window)
+        if(window.innerWidth >= 1005){
             setIsMobile(false)
         }else{
             setIsMobile(true)

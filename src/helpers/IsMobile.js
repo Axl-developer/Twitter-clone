@@ -1,6 +1,6 @@
 export const IsMobile = () => {
 
-    if(window.screen.width >= 500){
+    if(window.innerWidth >= 500){
         return false;
     }else{
         return true;

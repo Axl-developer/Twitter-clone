@@ -73,7 +73,7 @@ export const Actions = ({info}) => {
               text="Citar Tweet"
               onclick={() => activeNewTweet("retweet")}
             >
-              <Icons.IconRetweet />
+              <Icons.IconPencil />
             </DropdownItem>
           </Dropdown>
         )}
