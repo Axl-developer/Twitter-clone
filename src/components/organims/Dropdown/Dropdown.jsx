@@ -11,7 +11,7 @@ export const Dropdown = ({close,children}) => {
           cloneElement(child)
         )}
         <div>
-          <Button action={close} text={'Cancelar'} />
+          <Button action={close} variant="button-mobile" text={'Cancelar'} />
         </div>
       </div>
     </div>

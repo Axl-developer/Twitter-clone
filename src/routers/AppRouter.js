@@ -12,7 +12,6 @@ import { cleanResponse } from '../redux/slices/responseSlice';
 
 export const AppRouter = () => {
 
-    const {value} = useSelector((state) => state.modal)
     const dispatch = useDispatch()
 
     const [IsMobile, setIsMobile] = useState(true)
@@ -48,11 +47,11 @@ export const AppRouter = () => {
 
                 {(!IsMobile)&&<Widgets />}
             </div>
-            {value && 
-                    <Modal close={closeModal}>
-                        <NewTweet isModalTweet={true}/>
-                    </Modal>
-                }
+            {
+                <Modal close={closeModal}>
+                    <NewTweet isModalTweet={true}/>
+                </Modal>
+            }
         </Router>
     )
 }

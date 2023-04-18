@@ -1,11 +1,15 @@
 import React from 'react'
 import Icons from '../../icons';
 import './styles.scss';
+import { useSelector } from 'react-redux';
 
 
 export const Modal = ({children,close}) => {
+  
+  const {value} = useSelector((state) => state.modal)
 
   return (
+    value &&
     <div className='modal'>
         <div className="modal-card">
             <div className="modal-head">

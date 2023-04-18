@@ -4,7 +4,7 @@ import { IsMobile } from '../../helpers/IsMobile'
 
 import { Header } from '../../components/Headers/Header'
 import {NewTweet} from '../../components/organims'
-import { ContentTweet } from '../../components/organims/ContentTweet/ContentTweet'
+import { ContentTweet } from '../../components/organims'
 
 
 export const Home = () => {

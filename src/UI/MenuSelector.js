@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import {NavLink} from "react-router-dom";
+import { useDispatch } from 'react-redux'
 
 import Atoms from '../components/UI/Atoms';
 import Icons from '../components/icons';
 import {IsMobile} from '../helpers/IsMobile';
+import { toogleModal } from '../redux/slices/modalSlice';
 
 //Selector de Menu
 export const MenuSelector = () => {
     const [Mobile, setIsMobile] = useState(true)
+
+    const dispatch = useDispatch();
+
+    const activeModal = () =>{
+        dispatch(toogleModal(true))
+    }
+
 
 
     useEffect(() => {
@@ -31,8 +40,8 @@ export const MenuSelector = () => {
        <header className="UI__header">
            {
                 (Mobile)
-                ? <MenuMobile />
-                : <MenuDesktop />
+                ? <MenuMobile activeModal={activeModal}/>
+                : <MenuDesktop activeModal={activeModal}/>
            }
        </header>
     )
@@ -40,11 +49,11 @@ export const MenuSelector = () => {
 
 //---------MenuMoble
 
-export const MenuMobile = () => {
+export const MenuMobile = ({activeModal}) => {
     return (
         <div className="UI__MenuMobile">
             <NavLink to="/tweet"  >
-                <div className="UI__fixed_btn">
+                <div className="UI__fixed_btn" onClick={activeModal}>
                     <Icons.IconNewTweet />
                 </div>
             </NavLink>
@@ -75,7 +84,8 @@ export const MenuMobile = () => {
 
 //---------MenuDesktop
 
-export const MenuDesktop = () => {
+export const MenuDesktop = ({activeModal}) => {
+    
     return (
         <div className="UI_subHeader">
             <div className="UI_MenuDesktop">
@@ -133,11 +143,8 @@ export const MenuDesktop = () => {
                             </li>
                         </ul>
                         
-                        <div className="UI__fixed_btn">
-                            <a href="#NewTweet">
+                        <div className="UI__fixed_btn" onClick={activeModal}>
                                 <Icons.IconNewTweet />
-                            </a>
-                            
                         </div>
 
                     </div>
