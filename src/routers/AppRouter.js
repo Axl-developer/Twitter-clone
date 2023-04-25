@@ -40,12 +40,13 @@ export const AppRouter = () => {
 
     return (
         <Router>
-            <div style={{display:'flex'}} className="container">
+            <div className="container">
                 <MenuSelector />
 
-                <DashboardRouter />
-
-                {(!IsMobile)&&<Widgets />}
+                <main className='main'>
+                    <DashboardRouter />
+                    {(!IsMobile)&&<Widgets />}
+                </main>
             </div>
             {
                 <Modal close={closeModal}>

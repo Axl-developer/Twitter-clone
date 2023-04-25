@@ -57,21 +57,6 @@
                 border-radius: 35px;
                 overflow: hidden;
             }
-           .UI__iconContainer{
-            width: 42px;
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 25px;
-            overflow: hidden;
-
-            svg{
-                height: 26px;
-                width: 26px;
-                fill:var(--color-themeInvert);
-            }
-           }
         }
     }
 }
@@ -79,104 +64,54 @@
 
 //----------------------Menu Desktop
 
-.UI_MenuDesktop{
-    height: 100vh;
-    position: fixed;
-    .UI__nav{
-        height: 100%;
-        width: 68px;
-        border: none;
-        border-right: 1px solid getColor(border);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .UI__content_ul{
-            display: flex;
-            flex-direction: column;
             
-            .names{
-                display: none;
-            }
-            .UI__MenuComplete_item{
-                display: none;
-            }
-        }
-
-
-        div{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            min-width: 46px;
-            svg{
-                width: 44px;
-                height: 28px;
-                fill:var(--color-white);
-            }
-
-            .content-img{
-                border-radius: 50%;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                min-height: 38px;
-                min-width: 38px;
-                height: 38px;
-                width: 38px;
-                margin: 22px 0;
-                
-                img{
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-
-           
-        }
-
-        ul{
-            display: flex;
-            flex-direction: column;
-            height: auto;
-
-            li{
-                padding: 5px 0px;
-
-                svg{
-                    fill: getColor(textTweet)
-                }
-            }
-        }
-    }
-
-
-    .UI__fixed_btn{
-        position: unset;
-        min-width: 44px;
-        min-height: 44px;
-        margin: 10px auto;
-
-        width: 44px !important;
-        height: 44px !important;
-    }
-
+.names{
+    display: none;
+}
+.UI__MenuComplete_item{
+    display: none;
 }
 
-@media(min-height:615px){
+.UI__header{
+    height: 100vh;
+    top: 0;
+    position: sticky;
+    z-index: 1; 
+}
+
+@media(min-width:500px){
     .UI__header{
+        min-width: 68px;
+        
 
+            .UI_MenuDesktop{
+                position: fixed;
+                
+                .UI__nav{
+                    border: none;
+                }
+            }
+        
+    }
+    body{
+        
+        margin: auto;
 
-        .UI_MenuDesktop{
-            
-            .UI__content_ul{
-                margin-top: 10px;
+        .body{
+            margin-bottom: 0;
+            flex: 1 1;
+            align-items: stretch;
+            .sub_body{
+                border: 1px solid getColor(border2);
+                height: 100%;
             }
         }
+    }
+}
 
+@media(min-width:615px){
+    .UI__header{
+        // min-width: 88px;
     }
     .UI__MenuComplete_item{
         display: block !important;
@@ -188,42 +123,9 @@
     .names{
         display: block !important;
     }
-    .UI__header,.UI_MenuDesktop .UI__nav{
+    .UI__header{
         width: 275px;
-        margin-left: 140px;
     }
 
-    .UI__nav{
-        ul{
-            //width: 100%;
-            margin: 0 12px;
-
-            .tweet-content{
-                align-items: flex-start !important;
-            }
-
-            a{
-                text-decoration: none;
-                width: 100%;
-            }
-        }
-    }
-
-    .UI__iconContainer{
-        flex-direction: row !important;
-        width: auto !important;
-        justify-content: flex-start !important;
-        padding: 12px;
-
-        &:hover{
-            background-color: rgba($color: var(--color-primary), $alpha: 0.1)
-        }
-        
-
-        h1{
-            color: getColor(textPrimary);
-            font-size: 20px;
-            margin: 0 16px;
-        }
-    }
+    
 }

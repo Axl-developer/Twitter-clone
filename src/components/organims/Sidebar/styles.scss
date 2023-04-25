@@ -1,0 +1,130 @@
+.sidebar{
+    display: flex;
+    position:fixed;
+    height:100vh;
+    left:0;
+    top:0;
+    width:100%;
+    z-index:100;
+    
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 16px;
+    }
+
+    svg{
+        height: 21px;
+        width: 21px;
+        fill: var(--color-border-invert);
+    }
+    
+    &-data{
+        padding: 16px 0px;
+
+        &-head{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    &-img-content{
+
+        border-radius: 50%;
+        height: 40px;
+        overflow: hidden;
+        width: 40px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &-name{
+        margin-top: 8px;
+    }
+
+    &-info{
+        margin-top: 12px;
+        display: flex;
+
+        div{
+            display: flex;
+
+            &:first-child{
+                margin-right: 20px;
+            }
+
+            .bold{
+                margin-right: 4px;
+            }
+        }
+    }
+
+    &-svg{
+        border: 1px solid var(--color-borderButton);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+
+    }
+        aside{
+            height:100vh;
+            min-width: 280px;
+            width:70%;
+            background:var(--color-theme);
+        }
+
+        .after{
+            content:'';
+            height:100%;
+            width:30%;
+            background:var(--color-transparentBackground)
+        }
+
+    &-menu{
+
+        padding: 0 15px;
+
+        a{
+            text-decoration: none;
+        }
+
+        .active{
+
+            svg{
+                fill:var(--color-primary)
+            }
+
+            .names{
+                color:var(--color-primary)
+            }
+        }
+    }
+
+    &-items{
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    &-item{
+        padding: 16px 1px;
+        display: flex;
+        align-items: center;
+        
+        svg{
+            fill:var(--color-textPrimary);
+            margin-right: 24px;
+            height: 24px;
+            width: 24px;
+        }
+
+        .names{
+            font-weight: 400;
+            font-size: 24px;
+            
+        }
+    }
+}

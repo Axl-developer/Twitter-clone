@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Header } from '../../components/Headers/Header'
+import { Header } from '../../components/molecules/Header/Header'
 import { ListItem } from '../../components/molecules/List-item/ListItem'
 
 export const Explore = () => {

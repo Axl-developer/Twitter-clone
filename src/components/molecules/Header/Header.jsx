@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { IsMobile } from '../../helpers/IsMobile'
-import Icons from '../icons'
-import { Form } from '../molecules'
-import {Sidebar} from './Sidebar'
+import { IsMobile } from '../../../helpers/IsMobile'
+import Icons from '../../icons'
+import { Form } from '../Form/Form'
+
+import './styles.scss'
+import { Sidebar } from '../../organims'
 
 export const Header = ({img= true,search = false, title = false, config=false, destacados=false}) => {
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 
-import { Header } from '../../components/Headers/Header'
+import { Header } from '../../components/molecules/Header/Header'
 import { ListNotifications } from '../../components/molecules/List-notifications/ListNotifications'
 import { NothingInfo } from '../../components/NothingInfo/NothingInfo'
 

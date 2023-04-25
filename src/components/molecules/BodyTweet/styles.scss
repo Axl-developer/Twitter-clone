@@ -6,7 +6,7 @@
     position: absolute;
     top: 52px;
     width: 2px;
-    z-index: 100;
+    z-index: 2;
 }
 
 .bodyTweet{
@@ -94,7 +94,7 @@
     }
 
     .content_Tweet{//hacer atomico para no repetir en tweet card
-        color: var(--color-textTweet);
+        color: var(--color-textPrimary);
         font-size: 15px;
         overflow-wrap: break-word;
         margin-bottom: 12px;

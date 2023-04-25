@@ -33,6 +33,7 @@ import IconBlook from './IconBlook'
 import IconCode from './IconCode'
 import IconFlag from './IconFlag'
 import IconPencil from './IconPencil'
+import IconCirculePlus from './IconCirculePlus'
 
 export default {
     IconHome,
@@ -70,4 +71,5 @@ export default {
     IconCode,
     IconFlag,
     IconPencil,
+    IconCirculePlus,
 }

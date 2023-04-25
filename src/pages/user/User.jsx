@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '../../components/Headers/Header'
+import { Header } from '../../components/molecules/Header/Header'
 import { Perfil } from '../../components/organims/Perfil/Perfil'
 import { Tabs } from '../../components/organims/Tabs/Tabs'
 

@@ -1,7 +1,5 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-
-import { ResponseTweet } from '../ResponseTweet/ResponseTweet'
 import { Tweet } from '../Tweet/Tweet'
 
 import './styles.scss'
@@ -19,5 +17,4 @@ export const ContentTweet = () => {
             )
         }
     </>
-  )
-}
+)}

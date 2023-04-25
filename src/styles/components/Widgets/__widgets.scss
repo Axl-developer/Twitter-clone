@@ -1,19 +1,30 @@
-.Widgets__content{
-    width: 350px;
-}
+.Widgets{
 
-
-
-.Widgets__SingleContent{
-    background-color: getColor(widgetBackground);
-    border-radius: 16px;
-    margin: 20px auto;
-
-    h1{
-        font-weight: 900;
-        font-size: 20px;
-        color: getColor(textPrimary);
-        padding: 12px 16px;
+    &__content{
+        margin-right: 10px;
+        width: 290px;
     }
 
+    &__SingleContent{
+        background-color: getColor(widgetBackground);
+        border-radius: 16px;
+        margin: 20px auto;
+    
+        h1{
+            font-weight: 900;
+            font-size: 20px;
+            color: getColor(textPrimary);
+            padding: 12px 16px;
+        }
+    
+    }
+}
+
+@media (min-width:1095px) {
+    .Widgets{
+
+        &__content{       
+            width: 350px;
+        }
+    }
 }

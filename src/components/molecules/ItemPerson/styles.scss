@@ -1,0 +1,44 @@
+.item-person{
+    cursor: pointer;
+    border-radius: 33px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    margin-bottom: 12px;
+    transition-duration: 0.2s;
+
+    &:hover{
+        background: var(--color-hover);
+    }
+
+    &-data, &-options{
+        display: flex;
+        align-items: center;
+
+        .content-img{
+            margin-right: 12px;
+        }
+    }
+
+    &-names{
+        display: none;
+    }
+
+    svg{
+        display: none;
+        height: 18px;
+        width: 18px;
+        fill:var(--color-textPrimary);
+    }
+}
+
+
+@media(min-width:1282px){
+
+    .item-person{
+
+        &-names,svg   {
+            display: block;
+        }
+    }
+}

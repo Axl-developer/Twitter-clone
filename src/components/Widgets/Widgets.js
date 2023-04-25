@@ -13,7 +13,7 @@ export const Widgets = () => {
         <div className="Widgets__content">
             <Form />
 
-            <div style={{position:'relative'}}>
+            <div style={{position:'sticky'}}>
                 <SingleWidget title={'Tendencias'} items={trends}/>
 
                 <SingleWidget title={'A quién seguir'} items={whoToFollow}/>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Header } from '../../components/Headers/Header'
+import { Header } from '../../components/molecules/Header/Header'
 import { List } from '../../components/organims/List/List'
 import { ListasItem } from '../../components/molecules/Listas-item/ListasItem'
 import { FixList } from '../../components/organims/Fix-list/FixList'

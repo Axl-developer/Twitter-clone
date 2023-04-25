@@ -6,9 +6,20 @@
     margin: 0;
     font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
+
+a{
+    text-decoration: none;
+}
+
 body{
     background-color: getColor(theme);
 }
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
 .body{
     margin-bottom: 52px;
     width: 100%;    
@@ -61,56 +72,40 @@ li{
     color:var(--color-white);
 }
 
-@media(min-width:600px){
-    header{
-        flex: 1;
-        display: flex;
-        position: relative;
-        
-        .UI_subHeader{
-            width: 100%;
-            position: absolute;
-            right: 0;
-            display: flex;
-            justify-content: flex-end;
-
-            .UI_MenuDesktop{
-                position: fixed;
-                
-                .UI__nav{
-                    border: none;
-                }
-            }
-        }
-        
-    }
+@media(min-width:705px){
     body{
-        
-        margin: auto;
-    
-
         .body{
-            margin-bottom: 0;
-            flex: 4;
-            .sub_body{
-                max-width: 600px;
-                border: 1px solid getColor(border2);
-                height: 100%;
-            }
+            flex-grow: 2;
+            max-width: 600px;
         }
     }
 }
 
 @media(min-width:1000px){
-    .UI__header{
-        max-width: 88px;
+
+    body{
+        .body{
+            flex-grow: 2;
+            max-width: 600px;
+        }
     }
-    .body{
-        flex: 3 !important;
+}
+
+@media(min-width:1005px){
+    .main{
+        width: 920px;
+    }
+}
+
+@media(min-width:1095px){
+    .main{
+        width: 990px;
     }
 }
 
 .container{
-    max-width: 1200px;
+    display:flex;
+    justify-content: center;
+    max-width: 1265px;
     margin: auto;
 }

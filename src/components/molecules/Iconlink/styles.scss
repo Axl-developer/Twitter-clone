@@ -1,0 +1,51 @@
+.navlink{
+    &:hover{
+        .navlink-body{
+            background: var(--color-hover);
+        }
+    }
+    &-body{
+        align-items: center;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        overflow: hidden;
+        padding: 12px;
+        width: fit-content;
+        transition-duration: 0.2s;
+    
+        svg{
+            height: 26px;
+            width: 26px;
+            fill:var(--color-textPrimary);
+        }
+    }
+}
+
+@media(min-width:500px){
+    .navlink{
+        padding: 4px 0px;
+    }
+}
+
+@media(min-width:1282px){
+
+    .navlink{
+
+        &-body{
+            margin: 0;
+            
+            &:hover{
+                background-color: rgba($color: var(--color-primary), $alpha: 0.1)
+            }
+            
+            h1{
+                color: var(--color-textPrimary);
+                font-size: 20px;
+                margin: 0 16px;
+            }
+        }
+
+    }
+}
