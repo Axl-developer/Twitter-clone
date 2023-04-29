@@ -21,9 +21,16 @@ export const Home = () => {
         setIsMobile(isMobile) 
     });
 
+    const [tabSelected, setTabSelected] = useState(1);
+    const tabs = {
+        items:[{text:'Para ti',id:1},{text:'Siguiendo',id:2}],
+        select:tabSelected,
+        action:(id)=>{setTabSelected(id)}
+    }
+
     return (
         <div>
-            <Header title={'Inicio'} destacados={true}/>
+            <Header title={'Inicio'} tweetIcon={true} destacados={true} tabs={tabs}/>
             <div>
                 {(!Mobile) && <NewTweet variant='is-home' />}
                 <ContentTweet />

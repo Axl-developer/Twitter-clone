@@ -1,0 +1,11 @@
+.menu{
+    height: 100vh;
+    top: 0;
+    position: sticky;
+    z-index: 1; 
+    
+    @media(min-width:1282px){
+        width: 275px;
+    }
+}
+

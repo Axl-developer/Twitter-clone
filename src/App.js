@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Loading } from './Loading';
 import { AppRouter } from './routers/AppRouter';
+import { LoadTweet } from './components/atoms';
 
 export const App = () => {
 
@@ -14,7 +14,7 @@ export const App = () => {
 
     return (
         (Loagind)
-            ?  <Loading />
+            ?  <LoadTweet />
             : <AppRouter />
     )
 }

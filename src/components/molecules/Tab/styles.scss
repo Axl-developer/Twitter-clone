@@ -1,0 +1,38 @@
+.tab{
+    display: flex;
+    color:var(--color-textPrimary);
+    border-bottom: 1px solid var(--color-border);
+    justify-content: space-between;
+    
+
+    &-item{
+        flex: 1;
+        text-align: center;
+        padding: 0 16px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover{
+            background: var(--color-hover);
+        }
+        
+        &-content{
+            margin: auto;
+            min-width: 56px;
+            width: fit-content;
+            
+            h1{
+                padding: 16px 0px;
+            }
+        }
+        
+        &.active{
+            .border-bottom{
+                border-radius: 30px;
+                height: 4px;
+                background:var(--color-primary);
+            }
+        }
+    }
+    
+}

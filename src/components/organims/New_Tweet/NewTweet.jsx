@@ -120,7 +120,7 @@ export const NewTweet = ({isModalTweet = false, variant='',}) => {
                         </div>
 
                         <div className="newTweet__contentBtn">
-                            <button onClick={Addtweet} className="btn btn_secondary">Tweetear</button>
+                            <button onClick={Addtweet} className="btn btn_secondary">Twittear</button>
                         </div>
                     </div>
 

@@ -1,11 +1,9 @@
 import React, { useEffect, useState} from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router } from "react-router-dom";
 
 import { DashboardRouter } from './DashboardRouter';
-import { MenuSelector } from '../UI/MenuSelector';
-import { Widgets } from '../components/Widgets/Widgets';
-import {NewTweet} from '../components/organims';
+import {MenuSelector, NewTweet, Widgets} from '../components/organims';
 import { Modal } from '../components/atoms';
 import { toogleModal } from '../redux/slices/modalSlice';
 import { cleanResponse } from '../redux/slices/responseSlice';
@@ -25,7 +23,6 @@ export const AppRouter = () => {
 
 
     window.addEventListener("resize", function(){
-        console.log(window)
         if(window.innerWidth >= 1005){
             setIsMobile(false)
         }else{

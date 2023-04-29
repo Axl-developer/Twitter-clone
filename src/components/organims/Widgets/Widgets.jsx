@@ -1,8 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import Icons from '../icons'
-import { Form } from '../molecules'
-import { SingleWidget } from './SingleWidget'
+import { SingleWidget } from '../SingleWidget/SingleWidget'
+import { Form } from '../../molecules'
+
+import './styles.scss'
 
 export const Widgets = () => {
 
@@ -10,7 +11,7 @@ export const Widgets = () => {
     const whoToFollow = useSelector((state) => state.whoToFollow)
 
     return (
-        <div className="Widgets__content">
+        <div className="widgets-content">
             <Form />
 
             <div style={{position:'sticky'}}>

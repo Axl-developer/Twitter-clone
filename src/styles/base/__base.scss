@@ -24,6 +24,11 @@ body{
     margin-bottom: 52px;
     width: 100%;    
 }
+
+.sub_body{
+    border: 1px solid var(--color-border2);
+}
+
 li{
     list-style: none;
 }
@@ -72,11 +77,23 @@ li{
     color:var(--color-white);
 }
 
+@media(min-width:500px){
+    .body{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width:705px) {
+    .main{
+        flex: 1;
+    }
+}
+
 @media(min-width:705px){
     body{
         .body{
             flex-grow: 2;
-            max-width: 600px;
+            width: 600px;
         }
     }
 }

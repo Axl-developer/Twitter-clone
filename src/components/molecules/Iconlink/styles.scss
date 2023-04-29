@@ -20,6 +20,19 @@
             width: 26px;
             fill:var(--color-textPrimary);
         }
+
+        h1{
+            color: var(--color-textPrimary);
+            display: none;
+            font-size: 20px;
+            margin: 0 16px;
+        }
+    }
+
+    .active{
+        h1{
+            font-weight: bold;
+        }
     }
 }
 
@@ -41,9 +54,7 @@
             }
             
             h1{
-                color: var(--color-textPrimary);
-                font-size: 20px;
-                margin: 0 16px;
+                display: block;
             }
         }
 

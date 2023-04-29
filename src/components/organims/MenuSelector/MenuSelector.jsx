@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import {IsMobile} from '../helpers/IsMobile';
-import { toogleModal } from '../redux/slices/modalSlice';
-import { Navmenu } from '../components/molecules';
-import { NavDesktop } from '../components/organims';
+import { IsMobile } from '../../../helpers/IsMobile';
+import { toogleModal } from '../../../redux/slices/modalSlice';
+import { Navmenu } from '../../molecules';
+import { NavDesktop } from '../NavDesktop/NavDesktop';
+
+import './styles.scss'
 
 //Selector de Menu
 export const MenuSelector = () => {
@@ -27,7 +29,7 @@ export const MenuSelector = () => {
     });
 
     return (
-       <header className="UI__header">
+       <header className="menu">
            {
                 (Mobile)
                 ? <Navmenu activeModal={activeModal}/>
