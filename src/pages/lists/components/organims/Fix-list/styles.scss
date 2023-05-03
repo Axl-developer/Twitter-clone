@@ -1,0 +1,19 @@
+.fixList{
+    padding: 12px;
+    max-width: 80px;
+    max-height: 88px;
+
+    .content-img{
+        width: 68px;
+        height: 68px;
+        overflow: hidden;
+        border-radius: 12px;
+        margin: auto;
+    }
+
+    h1{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

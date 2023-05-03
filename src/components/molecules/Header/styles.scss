@@ -7,6 +7,18 @@
     top:-1px;
     z-index: 10;
     
+    &.is-second{
+        h1{
+            display: block;
+            padding: 0;
+        }
+        .header-img-content{
+            position: relative;
+            margin-right: 24px;
+            left: 0;
+        }
+    }
+
     &-content{
         
         align-items: center;
@@ -29,7 +41,7 @@
         }
     }
 
-    &__img_content{
+    &-img-content{
         align-items: center;
         border-radius:50%;
         display: flex;
@@ -71,7 +83,7 @@
             }
         }
         
-        &__img_content{
+        &-img-content{
             display: none;
         }
 

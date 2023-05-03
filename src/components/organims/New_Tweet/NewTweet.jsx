@@ -12,16 +12,6 @@ import { addTweet } from '../../../redux/slices/tweetsSlice'
 
 import './styles.scss';
 
-const retweet ={
-    id:0,
-    body:"From learning Navigation with Compose and Lists to creating designs that were fully functional Compose, you earned it @blundell_apps! #AndroidDevChallenge",
-    time:'6h',
-    name:"Android Developers",
-    tweet_name:"@AndroidDev",
-    url:"/assets/perfil/VRtfrDXq_x96.png",
-    imgs:[{id:2,url:'/assets/imgs/pexels-mihis-alex-21022.jpg'},{id:3,url:'/assets/imgs/pexels-thorn-yang-441794.jpg'}]
-}
-
 export const NewTweet = ({isModalTweet = false, variant='',}) => {
 
    console.log('creo que esto es un template xd')

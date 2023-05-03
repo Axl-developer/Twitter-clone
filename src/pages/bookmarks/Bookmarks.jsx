@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Header } from '../../components/molecules'
-import { NothingInfo } from '../../components/NothingInfo/NothingInfo'
+import { Header, NothingInfo } from '../../components/molecules'
 
 export const Bookmarks = () => {
 
@@ -9,7 +8,7 @@ export const Bookmarks = () => {
 
     return (
         <div>
-            <Header title={'Guardados'}/>
+            <Header title={'Guardados'} second="is-second"/>
             {
                 (bookmarks.length)
                 ?'bookmarks'

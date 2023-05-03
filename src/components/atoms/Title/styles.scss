@@ -26,11 +26,18 @@
         font-size: 20px;
     }
 
+    &.fz21{
+        font-size: 21px;
+    }
+
     &.fz24{
         font-size: 24px;
     }
 
     &.bold{
         font-weight: bold;
+    }
+    &.fw7{
+        font-weight: 700;
     }
 }

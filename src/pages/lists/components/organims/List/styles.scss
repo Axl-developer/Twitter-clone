@@ -1,0 +1,30 @@
+.lists{
+
+    &-content{
+
+        .isFixed{
+            display: flex;
+        }
+
+        & > div{
+            border-bottom: 1px solid var(--color-border);
+        }
+    }
+
+    &-h1{
+        padding: 12px 16px;
+    }
+
+    &-mapListas{
+        border: none;
+    }
+
+    &-mensaje-content{
+        padding: 32px;
+        border: none;
+    }
+
+    &-span{
+        margin-top: 8px;
+    }
+}

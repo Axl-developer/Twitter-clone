@@ -1,0 +1,49 @@
+.lists{
+    &-ListaItem{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: none;
+        padding: 12px 16px;
+
+        svg{
+            width: 20px;
+            fill:var(--color-primary)
+        }
+    }
+
+    &-info-content{
+        display: flex;
+        border: none;
+
+        .content-img{
+            width: 48px;
+            height: 48px;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-right: 16px;
+        }
+    }
+
+    
+    &-nombres{
+        display: flex;
+        flex-direction: column;
+    }
+    &-name{
+        line-height: 18px;
+    }
+
+    &-sub-names{
+        display: flex;
+        
+        .span{
+            margin-left: 4px;
+        }
+    }
+
+    &-user{
+        color:var(--color-textPrimary);
+        font-weight: 700;
+    }
+}

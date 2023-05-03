@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Header } from '../../components/molecules/Header/Header'
+import { NothingInfo } from '../../components/molecules'
 
-import { NothingInfo } from '../../components/NothingInfo/NothingInfo'
 
 export const Messages = () => {
 
@@ -10,7 +10,7 @@ export const Messages = () => {
 
     return (
         <div>
-            <Header title={'Mensajes'} config={true}/>
+            <Header title={'Mensajes'} second="is-second" config={true}/>
             {
                 (messages.length)
                 ?'messages'

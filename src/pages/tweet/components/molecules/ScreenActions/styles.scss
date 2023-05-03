@@ -1,0 +1,65 @@
+.screenActions{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+    
+    & > div{
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+    } 
+
+    .action{
+        display: flex;
+        align-items: center;
+    
+        svg{
+            fill:var(--color-grey);
+            height: 22px;
+            width: 22px;
+        }
+
+        .hover-icon{
+            align-items: center;
+            border-radius: 50px;
+            display: flex;
+            padding: 8px;
+            transition-duration: 0.2s;
+        }
+    
+        @mixin coments($hover,$color) {
+            &:hover{
+    
+                .hover-icon{
+                    background: $hover;
+                }
+    
+                svg{
+                    fill: $color;
+                }
+    
+                span{
+                    color:$color;
+                }   
+            }
+        }
+    
+        &.is-blue{
+            @include coments(var(--color-blue-hover),var(--color-blue))
+        }
+
+        &.is-green{
+            @include coments(var(--color-green-hover),var(--color-green))
+        }
+
+        &.is-coral{
+            @include coments(var(--color-coral-hover),var(--color-coral))
+        }
+    }
+
+    .is-active{
+        svg{
+            fill:var(--color-red);
+        }
+    }
+}

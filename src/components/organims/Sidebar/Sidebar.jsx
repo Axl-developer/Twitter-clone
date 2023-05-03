@@ -50,7 +50,7 @@ export const Sidebar = ({setSidebar}) => {
                             </NavLink>
                         </div>
                         <div>
-                            <NavLink to="/lists" activeClassName="active">
+                            <NavLink to="/list" activeClassName="active">
                                 <div className="sidebar-item">
                                     <Icons.IconList />
                                     <Title variant="bold fz20" text="Listas" />

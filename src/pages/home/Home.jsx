@@ -23,7 +23,12 @@ export const Home = () => {
 
     const [tabSelected, setTabSelected] = useState(1);
     const tabs = {
-        items:[{text:'Para ti',id:1},{text:'Siguiendo',id:2}],
+        items:[
+            {text:'Para ti',id:1},
+            {text:'Siguiendo',id:2},
+            {text:'Noticias L-P',id:3},
+            {text:'Programación',id:4},
+        ],
         select:tabSelected,
         action:(id)=>{setTabSelected(id)}
     }

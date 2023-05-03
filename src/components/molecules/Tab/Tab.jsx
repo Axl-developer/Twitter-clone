@@ -1,21 +1,23 @@
 import React from 'react'
-
-import './styles.scss'
 import { Title } from '../../atoms'
 
-export const Tab = ({tabs,change,select}) => {
+import './styles.scss'
+
+export const Tab = ({tabs,change,select,variant}) => {
   return (
     <div className='tab'>
-      {
-        tabs.map( tab =>
-          <div className={`${(select === tab.id) && 'active'} tab-item`} key={tab.text} onClick={()=>change(tab.id)}>
-            <div className='tab-item-content'>
-              <Title text={tab.text} variant={`fz15 ${(select !== tab.id)?'grey':'bold'}`}/>
-              <div className="border-bottom"></div>
+      <div className='tab-content'>
+        {
+          tabs.map( tab =>
+            <div className={`tab-item ${(select === tab.id) && 'active'} ${variant}`} key={tab.text} onClick={()=>change(tab.id)}>
+              <div className='tab-item-content'>
+                <Title text={tab.text} variant={`fz15 ${(select !== tab.id)?'grey':'bold'}`}/>
+                <div className="border-bottom"></div>
+              </div>
             </div>
-          </div>
-      )
-      }
+          )
+        }
+      </div>
     </div>
   )
 }
