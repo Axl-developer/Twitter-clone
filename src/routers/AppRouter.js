@@ -8,7 +8,7 @@ import { Modal } from '../components/atoms';
 import { toogleModal } from '../redux/slices/modalSlice';
 import { cleanResponse } from '../redux/slices/responseSlice';
 
-export const AppRouter = () => {
+ const AppRouter = () => {
 
     const dispatch = useDispatch()
 
@@ -53,3 +53,5 @@ export const AppRouter = () => {
         </Router>
     )
 }
+
+export default AppRouter

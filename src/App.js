@@ -1,20 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { AppRouter } from './routers/AppRouter';
+import React, { Suspense, lazy } from 'react'
 import { LoadTweet } from './components/atoms';
+
+const LazyRoter = lazy(() => import('./routers/AppRouter'))
 
 export const App = () => {
 
-    const [Loagind, setLoagind] = useState(true)
-
-    useEffect(() => {
-        setTimeout(() => {
-            setLoagind(false)
-        }, 2000);
-    }, [])
-
     return (
-        (Loagind)
-            ?  <LoadTweet />
-            : <AppRouter />
+        <Suspense fallback={<LoadTweet />}>
+            <LazyRoter />
+        </Suspense>
     )
 }

@@ -4,9 +4,10 @@ import { Tweet } from '../Tweet/Tweet'
 
 import './styles.scss'
 
-export const ContentTweet = () => {
+const ContentTweet = () => {
   const tweets = useSelector((state) => state.tweets)
 
+  
   return (
     <>
         {
@@ -18,3 +19,5 @@ export const ContentTweet = () => {
         }
     </>
 )}
+
+export default ContentTweet

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, lazy, useEffect, useState } from 'react'
 
 import { IsMobile } from '../../helpers/IsMobile'
 
-import {NewTweet} from '../../components/organims'
-import { ContentTweet } from '../../components/organims'
+import { NewTweet } from '../../components/organims'
 import { Header } from '../../components/molecules'
 
+const ContentTweet = lazy(() => import('../../components/organims/ContentTweet/ContentTweet'))
 
 export const Home = () => {
 
@@ -38,7 +38,9 @@ export const Home = () => {
             <Header title={'Inicio'} tweetIcon={true} destacados={true} tabs={tabs}/>
             <div>
                 {(!Mobile) && <NewTweet variant='is-home' />}
-                <ContentTweet />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <ContentTweet />
+                </Suspense>
             </div>
         </div>
     )
