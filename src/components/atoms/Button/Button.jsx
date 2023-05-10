@@ -2,8 +2,8 @@ import React from 'react'
 
 import './styles.scss'
 
-export const Button = ({text,action,variant}) => {
+export const Button = ({text,action,variant,disabled}) => {
   return (
-    <div className={`button ${variant}`} onClick={action} >{text}</div>
+    <button className={`button ${variant}`} onClick={action} disabled={disabled} >{text}</button>
   )
 }

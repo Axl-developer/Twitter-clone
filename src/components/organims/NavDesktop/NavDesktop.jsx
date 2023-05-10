@@ -42,13 +42,13 @@ export const NavDesktop = ({activeModal}) => {
                 <Icons.IconPerson />
             </Iconlink>
 
-            <Iconlink path="" text="Más opciones">
+            <Iconlink path="options" text="Más opciones">
                 <Icons.IconCircleOptions />
             </Iconlink>
             
             <div className="navDesktop-fixed-btn" onClick={activeModal}>
                 <Icons.IconNewTweet />
-                <Title text="Twittear" variant="fz17 bold"/>
+                <Title text="Twittear" variant="fz17 white bold"/>
             </div>
         </div>
         
