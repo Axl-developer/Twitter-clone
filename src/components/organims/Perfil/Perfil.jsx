@@ -1,6 +1,6 @@
 import React from 'react'
 import { Title } from '../../atoms'
-import Icons from '../../icons'
+import { Icons }from '../../icons'
 
 import './styles.scss'
 

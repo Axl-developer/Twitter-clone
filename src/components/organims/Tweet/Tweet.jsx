@@ -8,7 +8,7 @@ export const Tweet = ({info}) => {
 
     return (
         <>
-            {//map de responses
+            {
                 info?.response && <BodyTweet info={{...info.response}} actions={true} variant="is-response" />
             }
             <BodyTweet info={{...info}} actions={true}/>

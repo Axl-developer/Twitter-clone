@@ -4,7 +4,6 @@ export * from './MenuSelector/MenuSelector';
 export * from './NavDesktop/NavDesktop';
 export * from './New_Tweet/NewTweet';
 export * from './Perfil/Perfil';
-export * from './ResponseTweet/ResponseTweet';
 export * from './Sidebar/Sidebar';
 export * from './SingleWidget/SingleWidget';
 export * from './Tweet/Tweet';

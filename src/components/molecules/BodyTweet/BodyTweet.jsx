@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Options } from '../../atoms';
-import Icons from '../../icons';
+import { Icons }from '../../icons';
 import { Dropdown } from '../../organims';
 import { Actions } from '../Actions/Actions';
 import { DropdownItem } from '../DropdownItem/DropdownItem';

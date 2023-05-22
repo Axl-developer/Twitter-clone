@@ -6,7 +6,7 @@ import { Dropdown } from '../../../../../components/organims';
 import { DropdownItem } from '../../../../../components/molecules';
 
 import './styles.scss'
-import Icons from '../../../../../components/icons';
+import { Icons }from '../../../../../components/icons';
 import { updateTweet } from '../../../../../redux/slices/tweetsSlice';
 
 export const ScreenActions = ({info}) => {

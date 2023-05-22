@@ -10,8 +10,8 @@ export const Dropdown = ({close,children}) => {
         Children.map(children, child =>
           cloneElement(child)
         )}
-        <div>
-          <Button action={close} variant="button-mobile" text={'Cancelar'} />
+        <div className='dropdown-content-button'>
+          <Button action={close} variant="button-mobile is-w100 is-secondary p11" text={'Cancelar'} />
         </div>
       </div>
     </div>

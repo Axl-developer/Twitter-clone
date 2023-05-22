@@ -2,21 +2,40 @@
     align-items: center;
     border:1px solid var(--color-borderButton);
     border-radius: 99px;
+    cursor: pointer;
     display: flex;
     text-align: center;
     font-size: 15px;
     font-weight: 700;
     justify-content: center;
     text-align: center;
-    min-width: 44px;
-    min-height: 44px;
-    margin: 12px 16px;
     padding: 0 24px;
     cursor: pointer;
 
     &.is-primary{
         background-color: var(--color-primary);
         color: var(--color-textPrimary);
+    }
+
+    &.is-secondary{
+        background: none;
+        border-color: var(--color-borderButton);
+        color: var(--color-textPrimary);
+    }
+
+    &.p16{
+        padding: 7px 16px;
+    }
+    &.p11{
+        padding: 11px 0px;
+    }
+
+    &.is-w100{
+        width: 100%;
+    }
+
+    &.is-margin{
+        margin: 12px 16px;
     }
 
     &:disabled{

@@ -12,8 +12,8 @@ const ContentTweet = () => {
     <>
         {
             tweets.map( T=> 
-              <div className='contentTweet' >
-                <Tweet key={T.id} info={T}/>
+              <div className='contentTweet' key={T.id}>
+                <Tweet info={T}/>
               </div>
             )
         }

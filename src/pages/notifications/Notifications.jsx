@@ -5,7 +5,7 @@ import { ListNotifications } from './components/molecules'
 
 export const Notifications = () => {
 
-    const {all,mentios} = useSelector((state) => state.notifications)
+    const {all} = useSelector((state) => state.notifications)
 
     const [tabSelected, setTabSelected] = useState(1);
 

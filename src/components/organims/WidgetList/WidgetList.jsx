@@ -10,7 +10,7 @@ export const WidgetList = ({items}) => {
                 items.map( item => <WidgetItem key={item.id} info={item} />)
             }
             <div className="widgets-item">
-                <Title variant={'blue xs'} text="Mostrar más"/>
+                <Title variant={'blue fz15'} text="Mostrar más"/>
             </div>
         </div>
     )

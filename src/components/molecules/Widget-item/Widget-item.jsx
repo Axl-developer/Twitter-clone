@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Options } from '../../atoms'
-import Icons from '../../icons'
+import { Icons }from '../../icons'
 import { Dropdown } from '../../organims'
 import { DropdownItem } from '../DropdownItem/DropdownItem'
 

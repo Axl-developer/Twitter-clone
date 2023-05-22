@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { IsMobile } from '../../../helpers/IsMobile'
-import Icons from '../../icons'
+import { Icons }from '../../icons'
 import { Form } from '../Form/Form'
 import { Sidebar } from '../../organims'
 import { Tab } from '../Tab/Tab'

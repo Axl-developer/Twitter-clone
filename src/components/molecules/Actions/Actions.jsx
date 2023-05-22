@@ -5,7 +5,7 @@ import { getResponse } from "../../../redux/slices/responseSlice";
 import { updateTweet } from "../../../redux/slices/tweetsSlice";
 
 
-import Icons from "../../icons";
+import { Icons }from "../../icons";
 import { Dropdown } from "../../organims";
 import { DropdownItem } from "../DropdownItem/DropdownItem";
 import './styles.scss'

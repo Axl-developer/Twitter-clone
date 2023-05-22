@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Title } from '../../../../../components/atoms'
-import Icons from '../../../../../components/icons'
+import { Icons }from '../../../../../components/icons'
 
 import './styles.scss'
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import './styles.scss'
 import { Title } from '../../atoms'
-import Icons from '../../icons'
+import { Icons }from '../../icons'
 
 export const ItemPerson = () => {
   return (

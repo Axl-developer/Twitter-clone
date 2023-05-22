@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Icons from '../../icons'
+import { Icons }from '../../icons'
 import { Iconlink, ItemPerson } from '../../molecules'
 import { Title } from '../../atoms'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import Icons from '../../icons'
+import { Icons }from '../../icons'
 import { Title } from '../../atoms'
 
 import './styles.scss'
@@ -13,7 +13,7 @@ export const Sidebar = ({setSidebar}) => {
             <aside>
                 <div className='sidebar-header'>
                     <Title text="Información de la cuenta" variant="fz17 bold"/>
-                    <Icons.iconClose />
+                    <Icons.IconClose />
                 </div>
                 <div className="sidebar-menu">
                     <div className='sidebar-data'>

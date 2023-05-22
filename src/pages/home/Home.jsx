@@ -5,7 +5,7 @@ import { IsMobile } from '../../helpers/IsMobile'
 import { NewTweet } from '../../components/organims'
 import { Header } from '../../components/molecules'
 
-const ContentTweet = lazy(() => import('../../components/organims/ContentTweet/ContentTweet'))
+const ContentTweet = lazy(() => import(/* webpackChunkName: "Home" */'../../components/organims/ContentTweet/ContentTweet'))
 
 export const Home = () => {
 

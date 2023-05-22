@@ -1,5 +1,5 @@
 import React from 'react'
-import Icons from '../../icons';
+import { Icons }from '../../icons';
 import './styles.scss';
 import { useSelector } from 'react-redux';
 import { Button } from '../Button/Button';
@@ -15,7 +15,7 @@ export const Modal = ({children,close}) => {
         <div className="modal-card">
             <div className="modal-head">
                 <div className="modal-content-svg" onClick={close}>
-                  <Icons.iconClose />
+                  <Icons.IconClose />
                 </div>
                 <Button text="Responder" variant="is-primary modal-button" disabled={true} />
             </div>

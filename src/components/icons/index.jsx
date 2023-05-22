@@ -23,7 +23,7 @@ import IconBars from './IconBars'
 import IconEmojiHappy from './IconEmojiHappy'
 import IconCalendar from './IconCalendar'
 import IconCircle from './IconCircle'
-import iconClose from './iconClose'
+import IconClose from './IconClose'
 import IconWorld from './IconWorld'
 import IconEmojiSad from './IconEmojiSad'
 import IconPersonAdd from './IconPersonAdd'
@@ -38,7 +38,7 @@ import IconPin from './IconPin'
 import IconPinFull from './IconPinFull'
 import IconUp from './IconUp'
 
-export default {
+export const Icons = {
     IconHome,
     IconSchear,
     IconNotification,
@@ -63,7 +63,7 @@ export default {
     IconEmojiHappy,
     IconCalendar,
     IconCircle,
-    iconClose,
+    IconClose,
     IconWorld,
     IconAswerDislike,
     IconEmojiSad,

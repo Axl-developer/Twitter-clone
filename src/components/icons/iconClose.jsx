@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const iconClose = (props) => (
+const IconClose = (props) => (
   <svg
     viewBox="0 0 24 24"
     aria-hidden="true"
@@ -10,4 +10,4 @@ const iconClose = (props) => (
   </svg>
 )
 
-export default iconClose
+export default IconClose

@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { TextArea } from '../../atoms'
+import { Button, TextArea } from '../../atoms'
 import { Retweet,BodyTweet } from '../../molecules'
-import Icons from '../../icons'
+import { Icons }from '../../icons'
 
 import { useForm } from '../../../hooks/useForm'
 import { toogleModal } from '../../../redux/slices/modalSlice'
@@ -14,7 +14,6 @@ import './styles.scss';
 
 export const NewTweet = ({isModalTweet = false, variant='',}) => {
 
-   console.log('creo que esto es un template xd')
     const dispatch = useDispatch()
     const dataTweet = useSelector((state) => state.response)
 
@@ -45,6 +44,8 @@ export const NewTweet = ({isModalTweet = false, variant='',}) => {
     }
 
     const Addtweet = () => {
+        console.log('click');
+        
         (tweet) &&
             dispatch(addTweet(newTweet))
             dispatch(toogleModal(false))
@@ -106,14 +107,12 @@ export const NewTweet = ({isModalTweet = false, variant='',}) => {
                                     <Icons.IconCircle id="circle"/>
                                 </div>
                             </div>
-
                         </div>
 
                         <div className="newTweet__contentBtn">
-                            <button onClick={Addtweet} className="btn btn_secondary">Twittear</button>
+                            <Button text={dataTweet.type === 'response' ?'Responder' :'Twittear'} variant="is-primary p16" action={Addtweet}/>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

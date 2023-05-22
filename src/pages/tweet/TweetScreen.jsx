@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 import { GetTweetById } from '../../helpers/getTweetByid'
@@ -16,8 +16,6 @@ export const TweetScreen = () => {
     const comments = useSelector((state) => state.comments)
     const info = GetTweetById(tweets,Number(tweetid))
     const { answers,body,retweet,likes,nombre,retweets,tweet_nom,url,imgs } = info
-    
-    const [ContLike, setContLike] = useState(likes)
 
     return (
         <div>
@@ -27,7 +25,7 @@ export const TweetScreen = () => {
 
                 <div className="screenTweet-HeadTweet">
                     <div className="content-img">
-                        <img src={url} alt="img"/>
+                        <img src={process.env.PUBLIC_URL + url} alt="img"/>
                     </div>
                     <div className="screenTweet-names">
                         <Title text={nombre} variant="fz17 bold"/>
@@ -46,7 +44,7 @@ export const TweetScreen = () => {
                         retweet && <Retweet {...retweet}/>
                     }
                     <div className="screenTweet-times">
-                        <span className="lighter">9:14 p.m - 15 abr 2021 Twitter for iPhone</span>
+                        <Title text={"9:14 p.m · 15 abr. 2021"} variant='grey fz15'/>
                     </div>
 
                 </div>
@@ -57,7 +55,7 @@ export const TweetScreen = () => {
                         <span className="lighter">Retweets</span>
                         <h1 className="bold">{answers}</h1>
                         <span className="lighter">Citas</span>
-                        <h1 className="bold">{ContLike}</h1>
+                        <h1 className="bold">{likes}</h1>
                         <span className="lighter">Me gusta</span>   
                     </div>
                 </div>
