@@ -19,8 +19,19 @@
 
     &.is-secondary{
         background: none;
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    &.is-textPrimary{
+        background: none;
         border-color: var(--color-borderButton);
         color: var(--color-textPrimary);
+    }
+
+    &.is-textPrimaryInvert{
+        background: var(--color-textPrimary);
+        color: var(--color-textPrimaryInvert);
     }
 
     &.p16{

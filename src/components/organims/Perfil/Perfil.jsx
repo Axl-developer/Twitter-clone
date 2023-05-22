@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from '../../atoms'
+import { Button, Title } from '../../atoms'
 import { Icons }from '../../icons'
 
 import './styles.scss'
@@ -14,9 +14,7 @@ export const Perfil = () => {
                 <div className="content-img">
                     <img src={ process.env.PUBLIC_URL +  "/assets/perfil/pexels-ekrulila-4040433.jpg"} alt="img"/>
                 </div>
-                <div className="btn btn_primary">
-                    Editar perfil
-                </div>
+                <Button text="Editar perfil" variant="is-secondary p16"/>
             </div>
             
             <div className="user-data">

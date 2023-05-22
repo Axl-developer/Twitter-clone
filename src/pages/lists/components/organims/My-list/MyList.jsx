@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Title } from '../../../../../components/atoms'
+import { Button, Title } from '../../../../../components/atoms'
 import { Icons }from '../../../../../components/icons'
 
 import './styles.scss'
@@ -29,11 +29,10 @@ export const MyList = ({lista,setList,btn = false}) => {
                     </div>
                 </div>
             </div>
+            
             {
                 (btn)
-                ?<button className={ (!isActive)?"btn btn_primary":"btn btn_secondary"} onClick={(!isActive)?setItem:null}>
-                    {(!isActive)?"Seguir":"Siguiendo"}
-                    </button>
+                ?<Button text={(!isActive)?"Seguir":"Siguiendo"} variant={`p16 ${(!isActive)?"is-textPrimaryInvert":"is-textPrimary"}`} action={(!isActive)?setItem:null}/>
                 :
                 <div onClick={setItem}>
                     {

@@ -58,27 +58,6 @@ li{
     font-size:12px;
 }
 
-.btn{
-    background: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 5px 15px;
-    height: min-content;
-}
-
-.btn_primary{
-    border: 1px solid var(--color-primary);
-    color:var(--color-primary);
-}
-
-.btn_secondary{
-    background-color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    color:var(--color-white);
-}
-
 @media(min-width:500px){
     .body{
         margin-bottom: 0;
