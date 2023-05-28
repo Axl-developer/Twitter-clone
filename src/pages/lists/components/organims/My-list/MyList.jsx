@@ -9,7 +9,7 @@ export const MyList = ({lista,setList,btn = false}) => {
     const [isActive, setIsActive] = useState(false)
 
     const setItem = () => {
-        setList(c => [lista,...c])
+        setList(lista)
         setIsActive(!isActive)
     }
 
@@ -34,10 +34,10 @@ export const MyList = ({lista,setList,btn = false}) => {
                 (btn)
                 ?<Button text={(!isActive)?"Seguir":"Siguiendo"} variant={`p16 ${(!isActive)?"is-textPrimaryInvert":"is-textPrimary"}`} action={(!isActive)?setItem:null}/>
                 :
-                <div onClick={setItem}>
+                <div>
                     {
                     (!isActive)
-                        ?<Icons.IconPin />
+                        ?<Icons.IconPin onClick={setItem} />
                         :<Icons.IconPinFull />
                     }
                 </div>

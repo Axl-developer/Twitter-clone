@@ -6,7 +6,6 @@ import './styles.scss'
 
 const ContentTweet = () => {
   const tweets = useSelector((state) => state.tweets)
-
   
   return (
     <>

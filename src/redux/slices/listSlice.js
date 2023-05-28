@@ -1,28 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ListEmptyState } from "../../models/list.type";
 
 
 export const listSlice = createSlice({
     name:'list',
-    initialState:{
-        news:[
-            {
-                id:1,
-                nombre_lista:"Programación",
-                tweet_nom:"@Dev",
-                nombre:"AndroidDev",
-                url:'/assets/perfil/mvBRhlDs.jpg'
-            },
-            {
-                id:2,
-                nombre_lista:"Noticias Mundo",
-                tweet_nom:"@Google",
-                nombre:"Google",
-                url:'/assets/perfil/VRtfrDXq_x96.png'
-            }
-        ],
-        yourList:[],
-        fixed:[]
+    initialState:ListEmptyState,
+    reducers: {
+        createList: (state,action) => { 
+            const formatteList = {...action.payload}
+            return formatteList; 
+        },
+        modifyListFixed: (state,action) => { 
+            const newFixedLit = [...state.fixed,{...action.payload}]
+            const modifyList = {...state,fixed:newFixedLit}
+            return modifyList; 
+        },
+        modifyListYourList: (state,action) => { 
+            const newYourList = [...state.yourList,{...action.payload}]
+            const modifyList = {...state,yourList:newYourList}
+            return modifyList; 
+        }
     }
 })
+
+export const { createList, modifyListFixed, modifyListYourList } = listSlice.actions
 
 export default listSlice.reducer

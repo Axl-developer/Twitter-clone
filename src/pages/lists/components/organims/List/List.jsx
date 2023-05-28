@@ -1,15 +1,19 @@
 import React from 'react'
 
 import './styles.scss'
-import { Title } from '../../../../../components/atoms'
+import { Loader, Title } from '../../../../../components/atoms'
 
-export const List = ({title,listas,mensaje,setList,Component,btn,variant = ''}) => {
+export const List = ({isLoading,title,listas,mensaje,setList,Component,btn,variant = ''}) => {
+
     return (
         <div className="lists-content">
             <Title text={title} variant="fz21 bold lists-h1"/>
             
             {
-                (listas.length)
+                (isLoading)
+                ?<Loader/>
+            
+                :(listas.length)
                     ?<div className={`lists-mapListas ${variant}`}>
                         {
                             listas.map(lista => <Component key={lista.id} lista={lista} setList={setList} btn={btn} />)
@@ -24,3 +28,5 @@ export const List = ({title,listas,mensaje,setList,Component,btn,variant = ''}) 
         </div>
     )
 }
+
+export default List
