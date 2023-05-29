@@ -10,20 +10,18 @@ import { getList } from './services/list.services'
 
 export const Lists = () => {
     const dispatch = useDispatch()
+    const {news,yourList,fixed} = useSelector((state) => state.list)
 
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(!news.length && true);
 
 
     useEffect(() => {
-        let monuted = true
+        let monuted = true;
         
-        monuted && getList(dispatch,setIsLoading)
+        (monuted & isLoading) && getList(dispatch,setIsLoading)
 
         return () => monuted = false
-    }, [dispatch])
-    
-
-    const {news,yourList,fixed} = useSelector((state) => state.list)
+    }, [dispatch,isLoading])
 
     const setFixedList = (list) => {
         dispatch(modifyListFixed(list))

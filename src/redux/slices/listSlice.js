@@ -7,8 +7,7 @@ export const listSlice = createSlice({
     initialState:ListEmptyState,
     reducers: {
         createList: (state,action) => { 
-            const formatteList = {...action.payload}
-            return formatteList; 
+            return {...action.payload}
         },
         modifyListFixed: (state,action) => { 
             const newFixedLit = [...state.fixed,{...action.payload}]

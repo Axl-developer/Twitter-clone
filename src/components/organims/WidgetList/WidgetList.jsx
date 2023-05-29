@@ -2,10 +2,12 @@ import React from 'react'
 import { Title } from '../../atoms'
 import { WidgetItem } from '../../molecules'
 
-export const WidgetList = ({items}) => {
+import './styles.scss'
+
+export const WidgetList = ({items,variant}) => {
 
     return (
-        <div className="Widgets__WidgetList">
+        <div className={variant}>
             {
                 items.map( item => <WidgetItem key={item.id} info={item} />)
             }
