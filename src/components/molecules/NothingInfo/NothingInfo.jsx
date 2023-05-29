@@ -5,8 +5,8 @@ import './styles.scss'
 
 export const NothingInfo = ({title,text}) => {
     return (
-        <div className="Nothing-info">
-            <Title text={title} variant="bold fz31 Nothing-title" />
+        <div className="nothing-info">
+            <Title text={title} variant="bold fz31 nothing-title" />
             <Title text={text} variant="grey fz15" />
         </div>
     )

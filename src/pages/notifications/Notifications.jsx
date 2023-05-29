@@ -26,7 +26,7 @@ export const Notifications = () => {
             {
                 // crear un solo list para simplificar ambas listas
                 (tabs.select === 1)
-                    ?<ListNotifications items={all}/>
+                    ?<NothingInfo title={'No hay nada que ver aquí. Por ahora.'} text={'Todas tus notificaciones, las verás aquí.'}/>
                     :<NothingInfo title={'No hay nada que ver aquí. Por ahora.'} text={'Me gusta, menciones, Retweets y mucho más: si proviene de una cuenta verificada, lo verás aquí.'}/>
             }
 
