@@ -45,7 +45,7 @@ export const Header = (props) => {
                 }
             </div>
             {
-                (Object.entries(tabs).length) && <Tab tabs={tabs.items} change={tabs.action} select={tabs.select} variant="flex1"/>
+                (Object.entries(tabs).length > 0) && <Tab tabs={tabs.items} change={tabs.action} select={tabs.select} variant="flex1"/>
             }
         </header>
     )

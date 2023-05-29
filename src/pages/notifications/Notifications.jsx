@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
 import { Header, NothingInfo, Tab } from '../../components/molecules'
-import { ListNotifications } from './components/molecules'
 
 export const Notifications = () => {
-
-    const {all} = useSelector((state) => state.notifications)
 
     const [tabSelected, setTabSelected] = useState(1);
 
