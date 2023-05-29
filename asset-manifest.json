@@ -1,27 +1,27 @@
 {
   "files": {
-    "LazyLayout.css": "/Twitter-clone/static/css/LazyLayout.f255ab80.chunk.css",
+    "LazyLayout.css": "/Twitter-clone/static/css/LazyLayout.921c1cdb.chunk.css",
     "LazyLayout.js": "/Twitter-clone/static/js/LazyLayout.057367e3.chunk.js",
     "LazyLayout.js.map": "/Twitter-clone/static/js/LazyLayout.057367e3.chunk.js.map",
-    "main.css": "/Twitter-clone/static/css/main.475ed694.chunk.css",
+    "main.css": "/Twitter-clone/static/css/main.42b13dfb.chunk.css",
     "main.js": "/Twitter-clone/static/js/main.72cee3fc.chunk.js",
     "main.js.map": "/Twitter-clone/static/js/main.72cee3fc.chunk.js.map",
-    "runtime-main.js": "/Twitter-clone/static/js/runtime-main.c32da56f.js",
-    "runtime-main.js.map": "/Twitter-clone/static/js/runtime-main.c32da56f.js.map",
+    "runtime-main.js": "/Twitter-clone/static/js/runtime-main.99330915.js",
+    "runtime-main.js.map": "/Twitter-clone/static/js/runtime-main.99330915.js.map",
     "static/js/3.ef768b96.chunk.js": "/Twitter-clone/static/js/3.ef768b96.chunk.js",
     "static/js/3.ef768b96.chunk.js.map": "/Twitter-clone/static/js/3.ef768b96.chunk.js.map",
     "static/js/4.ba31d46a.chunk.js": "/Twitter-clone/static/js/4.ba31d46a.chunk.js",
     "static/js/4.ba31d46a.chunk.js.map": "/Twitter-clone/static/js/4.ba31d46a.chunk.js.map",
     "index.html": "/Twitter-clone/index.html",
-    "static/css/LazyLayout.f255ab80.chunk.css.map": "/Twitter-clone/static/css/LazyLayout.f255ab80.chunk.css.map",
-    "static/css/main.475ed694.chunk.css.map": "/Twitter-clone/static/css/main.475ed694.chunk.css.map",
+    "static/css/LazyLayout.921c1cdb.chunk.css.map": "/Twitter-clone/static/css/LazyLayout.921c1cdb.chunk.css.map",
+    "static/css/main.42b13dfb.chunk.css.map": "/Twitter-clone/static/css/main.42b13dfb.chunk.css.map",
     "static/js/3.ef768b96.chunk.js.LICENSE.txt": "/Twitter-clone/static/js/3.ef768b96.chunk.js.LICENSE.txt",
     "static/js/4.ba31d46a.chunk.js.LICENSE.txt": "/Twitter-clone/static/js/4.ba31d46a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c32da56f.js",
+    "static/js/runtime-main.99330915.js",
     "static/js/3.ef768b96.chunk.js",
-    "static/css/main.475ed694.chunk.css",
+    "static/css/main.42b13dfb.chunk.css",
     "static/js/main.72cee3fc.chunk.js"
   ]
 }
